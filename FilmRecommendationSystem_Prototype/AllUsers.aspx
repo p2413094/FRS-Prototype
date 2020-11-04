@@ -11,7 +11,7 @@
 <body class="body">
     <form runat="server">
         <p class="logo textlink">
-            <a href="Homepage.html">FILM RECOMMENDER</a>
+            <a href="Homepage.aspx">FILM RECOMMENDER</a>
         </p>
 
         <br />
@@ -25,7 +25,7 @@
                 <div class="dropdown-content">
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/WatchLater.png">
+                        <img class="imagedimensions" src="Images/WatchLater.png" />
                     </div>
                     <a href="WatchList.aspx">WATCHLIST</a>
                     <br />
@@ -33,7 +33,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/FavouriteInList.png">
+                        <img class="imagedimensions" src="Images/FavouriteInList.png" />
                     </div>
                     <a href="FavouriteFilms.aspx">FAVOURITES</a>
                     <br /> 
@@ -41,7 +41,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/Log out.png">
+                        <img class="imagedimensions" src="Images/Log out.png" />
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
                 </div>
@@ -59,7 +59,7 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()">
+                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="searchdropdown-content">
                         <a href="FilmInformation2.aspx">The Terminator (1984)</a>
@@ -89,10 +89,9 @@
                         <th id="PhoneNumber">Phone number</th>
                         <th id="EmailPhoneConfirmed">Email/ phone confirmed?</th>
                         <th id="LastLogin">Last login</th>
-                        <th id="AccountCreated">Account created</th>
-                        <div>
-                            <th id="Actions">Actions</th>
-                        </div>
+                        <th id="Suspended">Susp?</th>
+                        <th id="Actions">Actions</th>
+                        
                     </tr>
 
                     <tr>
@@ -101,34 +100,28 @@
                         <td>01902714537</td>
                         <td>Yes/ No</td>
                         <td>19:10, 20/10/20</td>
-                        <td>26/04/20</td>
                         <td>
-                            <button type="button" onclick="btnEdit_Clicked()" >Edit</button>
-                            <button type="button" id="btnSuspendUser" onclick="SuspendUserAccount()">Suspend</button>
+                            <label id="lblSuspended">No</label>
+                        </td>
+                        <td class="tablecell-actions" id="cellTableActions">
+                            <img src="Images/Edit%20icon.png" class="action_icon" onclick="btnEdit_Clicked()" />
+                            <img src="Images/NoIcon.png" id="iconSuspendUser" class="action_icon" onclick="SuspendUserAccount()" />
                         </td>
                     </tr>
 
                     <tr>
                         <td>SecondGreatestEver99</td>
-                        <td>secondgreatestever99@icloud.com</td>
+                        <td>secondever99@icloud.com</td>
                         <td>0121765432</td>
                         <td>Yes/ Yes</td>
                         <td>17:34, 28/10/20</td>
-                        <td>01/05/20</td>
-                        <td>
-                            <button type="button" onclick="btnEdit_Clicked()" >Edit</button>
-                            <button type="button">Delete</button>
-                            <button type="button" id="btnUnsuspend" onclick="UnsuspendUserAccount()">Unsuspend user</button>
-                        </td>
+                        <td>No</td>
+                        <td></td>
                     </tr>
                 
                 </table>
             </div>
-
-            
-            <div>
-                
-            </div>
+         
             <br />
             <br />
         </div>
@@ -142,7 +135,7 @@
                 var confirmMessage = confirm("Suspend user account?");
                 if (confirmMessage == true) {
                     alert("User suspended");
-                    document.getElementById("btnSuspendUser").innerText = "Unsuspend user";
+                    document.getElementById("lblSuspended").innerText = "Y";
                 }
                 else {
                     alert("User not suspended")
@@ -187,3 +180,4 @@
         </div>
     </form>
 </body>
+</html>

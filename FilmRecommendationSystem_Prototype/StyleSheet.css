@@ -432,13 +432,13 @@ table {
 }
 
 th {
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
     padding-bottom: 30px;
 }
 
 td {
-    font-size: 15px;
+    font-size: 14px;
     padding-bottom: 20px;
 }
 
@@ -453,12 +453,13 @@ td {
 .action_icon {
     height: 40px;
     width: 40px;
-    margin-right: 15px;
+    margin-right: 13px;
 }
 
 
 .tablecell-actions {
     opacity: 0;
+    min-width: 150px;
 }
 
 .tablecell-actions:hover {
