@@ -98,10 +98,10 @@
                         <td>GreatestEver98</td>
                         <td>greatestever98@icloud.com</td>
                         <td>01902714537</td>
-                        <td>Yes/ No</td>
+                        <td>Y/ N</td>
                         <td>19:10, 20/10/20</td>
                         <td>
-                            <label id="lblSuspended">No</label>
+                            <label id="lblSuspended">N</label>
                         </td>
                         <td class="tablecell-actions" id="cellTableActions">
                             <img src="Images/Edit%20icon.png" class="action_icon" onclick="btnEdit_Clicked()" />
@@ -113,9 +113,9 @@
                         <td>SecondGreatestEver99</td>
                         <td>secondever99@icloud.com</td>
                         <td>0121765432</td>
-                        <td>Yes/ Yes</td>
+                        <td>Y/ Y</td>
                         <td>17:34, 28/10/20</td>
-                        <td>No</td>
+                        <td>N</td>
                         <td></td>
                     </tr>
                 
