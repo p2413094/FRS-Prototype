@@ -25,7 +25,7 @@
                 <div class="dropdown-content">
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/WatchLater.png">
+                        <img class="imagedimensions" src="Images/WatchLater.png" />
                     </div>
                     <a href="WatchList.aspx">WATCHLIST</a>
                     <br />
@@ -33,7 +33,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/FavouriteInList.png">
+                        <img class="imagedimensions" src="Images/FavouriteInList.png" />
                     </div>
                     <a href="FavouriteFilms.aspx">FAVOURITES</a>
                     <br /> 
@@ -76,6 +76,9 @@
         <br />
         <br />
         <br />
+        <br />
+        <br />
+
         <div class="account">
             <p class="page-header">
                 Add new film 
@@ -88,8 +91,7 @@
                 <input id="txtFilmTitle" type="text" class="textentry-fieldsize" placeholder="e.g. Top Gun" />
             </div>
             
-            <div id="lblEmailErrorMessage" class="emailerrormessage">
-            </div>
+         
 
             <br />
             <br />
@@ -137,11 +139,6 @@
                 * denotes mandatory field
             </div>
 
-            <div id="test2" class="smallmessage">
-                <label id="lblNewError">Test</label>
-            </div>
-
-
             <br />
             <br />
             <div class="filmrecommendation-getrecommendationsbutton">
@@ -151,61 +148,62 @@
 
         </div>            
 
+
         
 
-        <script>
-
-            var filmTitle,
-                genre;
-
+        <script>       
             function onload() {
-                document.getElementById("lblNewError").style.visibility = "visible";
-            }
 
-            function testFunction() {
-                //var filmTitle = document.getElementById("txtFilmTitle").value;
-                document.getElementById("test2").style.visibility = "hidden";
-                document.getElementById("lblNewError").style.visibility = "hidden";
-                document.getElementById("txtFilmTitle").style.border="2px solid red";
-
-                
             }
 
             function CheckNewFilm() {
                 document.getElementById("txtFilmTitle").value;
             }
 
-
-
-
             function btnAddNewFilm_Click() {
-                var addFilm = 0;
-                var confirmMessage = confirm("Add new film to database?");
-                if (confirmMessage == true) {
-                    alert("Film added!");
-                    addFilm = 1;
-                }
-                else {
-                    alert("Film not added");
-                }
-
-
                 var filmTitle = document.getElementById("txtFilmTitle").value,
                     yearReleased = document.getElementById("txtYearReleased").value,
-                    genre = document.getElementById("txtGenre").value;
+                    genre = document.getElementById("txtGenre").value,
+                    count = 0;
 
-                sessionStorage.setItem("addFilm", addFilm);
-                sessionStorage.setItem("filmTitle", filmTitle);
-                sessionStorage.setItem("yearReleased", yearReleased);
-                sessionStorage.setItem("genre", genre);
+                if (filmTitle.length == 0) {
+                    document.getElementById("txtFilmTitle").style.border = "2px solid red";
+                    count++;
+                }
+                if (yearReleased.length == 0) {
+                    document.getElementById("txtYearReleased").style.border = "2px solid red";
+                    count++;
+                }
+                if (genre.length == 0) {
+                    document.getElementById("txtGenre").style.border = "2px solid red";
+                    count++;
+                }
 
-                location.href = "AllFilms.aspx";
+                if (count == 0) {
+                    var addFilm = 0;
+                    var confirmMessage = confirm("Add new film to database?");
+                    if (confirmMessage == true) {
+                        alert("Film added!");
+                        addFilm = 1;
+                        sessionStorage.setItem("addFilm", addFilm);
+                        sessionStorage.setItem("filmTitle", filmTitle);
+                        sessionStorage.setItem("yearReleased", yearReleased);
+                        sessionStorage.setItem("genre", genre);
+
+                        location.href = "AllFilms.aspx";
+                    }
+
+                    else {
+                        alert("Film not added");
+                    }
+                }
+                          
             }
 
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */
             function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+                document.getElementById("myDropdown").classList.toggle("show");
             }
 
             function filterFunction() {
@@ -225,7 +223,16 @@
             }
         </script>
         <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
+            <div class="links">
+                <a target="blank" href="HelpPage.aspx">Help</a>
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
         </div>
     </form>
 </body>
