@@ -12,6 +12,9 @@
         <p class="logo textlink">
             <a href="Homepage.aspx">FILM RECOMMENDER</a>
             <ul>
+                <br />
+                <br />
+                <br />
                 <li><a href="Register.aspx">REGISTER</a></li>
                 <li><a href="Login.aspx">SIGN IN</a></li>
             </ul>

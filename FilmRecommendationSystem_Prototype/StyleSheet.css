@@ -93,6 +93,8 @@ a {
     font-style: normal;
     font-size: 15px;
     text-align: center;
+    width: 60%;
+    margin: auto;
 }
 
 .account {
