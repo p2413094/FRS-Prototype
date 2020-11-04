@@ -110,10 +110,8 @@
                             01111
                         </td>
                         <td>
-                            <button class="actionButton" type="button" onclick="btnEdit_Clicked()">EDIT</button>
-                            <button class="actionButton" type="button" onclick="DeleteFilm()">DELETE</button>
-                            <img src="Images/Edit%20icon.png" class="edit_icon" />
-
+                            <img src="Images/Edit%20icon.png" class="action_icon" onclick="btnEdit_Clicked()" />
+                            <img src="Images/TrashCan.png" class="action_icon" onclick="DeleteFilm()" />
                         </td>
                     </tr>
 
