@@ -453,12 +453,26 @@ td {
 .action_icon {
     height: 40px;
     width: 40px;
-    margin-right: 10px;
+    margin-right: 15px;
+}
+
+
+.tablecell-actions {
+    opacity: 0;
+}
+
+.tablecell-actions:hover {
+    opacity: 1;
+    transition: 0.3s;
 }
 
 
 
 
+
+.container-tableaction:hover {
+    opacity: 0.1;
+}
 
 
 .textbox-transparent {
@@ -488,7 +502,7 @@ td {
     padding-left: 12px;
     padding-right: 12px;
     position: relative;
-    margin-left: 20%;
+    margin: auto;
     font-family: Avenir, sans-serif;
 }
 
@@ -508,7 +522,7 @@ td {
     font-size: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: lighter;
-    margin-left: 20%;
+    margin-left: 0%;
 }
 
 .myaccount .section-container-password {

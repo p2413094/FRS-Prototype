@@ -99,8 +99,6 @@
                         <th id="Actions">Actions</th>
                     </tr>
 
-
-
                     <tr id="rowToyStory">
                         <td>Toy Story</td>
                         <td>1995</td>
@@ -109,10 +107,12 @@
                         <td>
                             01111
                         </td>
-                        <td>
+                        
+                        <td class="tablecell-actions" id="cellTableActions">
                             <img src="Images/Edit%20icon.png" class="action_icon" onclick="btnEdit_Clicked()" />
                             <img src="Images/TrashCan.png" class="action_icon" onclick="DeleteFilm()" />
                         </td>
+                        
                     </tr>
 
                     <tr>
@@ -121,10 +121,6 @@
                         <td>Adventure, animation, Disney</td>
                         <td>0317705</td>
                         <td>9806</td>
-                        <td>
-                            <button type="button" onclick="btnEdit_Clicked()" >Edit</button>
-                            <button type="button">Delete</button>
-                        </td>
                     </tr>
 
                     <tr>
@@ -133,10 +129,7 @@
                         <td>Animation, Comedy, Disney</td>
                         <td></td>
                         <td>9806</td>
-                        <td>
-                            <button type="button" onclick="btnEdit_Clicked()" >Edit</button>
-                            <button type="button">Delete</button>
-                        </td>
+                      
                     </tr>
 
                     <tr id="rowNewFilm">
@@ -145,10 +138,6 @@
                         <td><label id="lblGenre"></label></td>
                         <td></td>
                         <td></td>
-                        <td>
-                            <button type="button" onclick="btnEdit_Clicked()" >Edit</button>
-                            <button type="button">Delete</button>
-                        </td>
                     </tr>
                 </table>
             </div>
@@ -164,6 +153,7 @@
         <script>
 
             function onLoad() {
+
                 var addFilm = sessionStorage.getItem("addFilm");
 
                 if (addFilm != 0) {

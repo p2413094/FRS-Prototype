@@ -93,7 +93,7 @@
         <br />
         <br />
         <br />
-        <div class="page-header1">
+        <div class="page-header">
             My account STAFF MEMBER 
         </div>
 
@@ -101,17 +101,13 @@
         <br />
         <br />
     
-        <button type="button" class="stafffunctions-button" onclick="btnViewUsers_Clicked()">View users</button>
+        <button type="button" class="Addnewfilm-button" onclick="btnViewUsers_Clicked()">View users</button>
         <br />
-        <button type="button" onclick="btnViewFilms_Clicked()" class="stafffunctions-button">View all films </button>
+        <button type="button" onclick="btnViewFilms_Clicked()" class="Addnewfilm-button">View all films </button>
 
 
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />  <br />
         <br />
         <br />
         <br />
