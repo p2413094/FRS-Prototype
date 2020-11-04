@@ -67,7 +67,7 @@ a {
     left: 0;
     bottom: 0;
     overflow: hidden;
-    margin-top: 100%;
+    margin-top: 50%;
     position: relative;
 }
 
@@ -712,7 +712,7 @@ th {
 
 /* Dropdown Content (Hidden by Default) */
 .filmSearch-dropdown-content {
-    display: block; /*none;*/
+    display: none; /*block;*/
     position: absolute;
     background-color: #f6f6f6;
     min-width: 230px;
@@ -779,4 +779,9 @@ th {
     text-align: center;
     font-style: italic;
     font-size: 20px;
+}
+
+.getrecommendations-button {
+    background-color: limegreen;
+    line-height: 60px;
 }

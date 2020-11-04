@@ -86,31 +86,40 @@
             <br />
             <br />
             <br />
-            <label id="lblFilmsAdded">Films already added:</label>
+            <label id="lblFilmsAdded">Films added:</label>
+            <br />
+            <br />
+            <button id="btnGetRecommendations" onclick="GetRecommendations()" class="getrecommendations-button" type="button">GET RECOMMENDATIONS</button>
 
-            
         </div>
 
+        <br />
+        <br />
+        <section id="secYourRecommendations" class="watchlist">
+            <div class="homepage-subHeader">
+                Your recommendations
+            </div>
+            <a href="FilmInformation.aspx">
+                <img src="Images/Terminator.jpg" class="image" />
+            </a>
+            <img src="Images/Alien.jpg" class="image" />
+            <img src="Images/District 9.jpg" class="image" />
+            <img src="Images/Ghostbusters.jpg" class="image" />
+        </section>
+
+
 
 
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-
         <div class="homepage-mostRecommendedFilms">
             Most recommended films
         </div>
 
         <section class="watchlist">
-            <a href="FilmInformation.aspx">
-                <img src="Images/Terminator.jpg" class="image" />
-            </a>
-            <img src="Images/Aliens.jpg" class="image" />
+            <img src="Images/Terminator.jpg" class="image" />
+            <img src="Images/King Kong.jpg" class="image" />
             <img src="Images/TCM.jpg" class="image" />
             <img src="Images/Dunkirk.jpg" class="image" />
             <img src="Images/District 9.jpg" class="image" />
@@ -119,17 +128,26 @@
         </section>
 
 
+
         <script>
+            
             function onLoad() {
                 document.getElementById("lblFilmsAdded").style.visibility = "hidden";
+                document.getElementById("btnGetRecommendations").style.visibility = "hidden";
+                document.getElementById("secYourRecommendations").style.display = "none";
             }
 
+            function GetRecommendations() {
+                document.getElementById("secYourRecommendations").style.display = "block"
+            };
 
             function AddItemToLabel() {
                 document.getElementById("lblFilmsAdded").style.visibility = "visible";
                 document.getElementById("lblFilmsAdded").innerText += "  Aliens (1986)";
                 document.getElementById("filmSearchDropdown").style.visibility = "hidden";
                 document.getElementById("filmName").value = "";
+                document.getElementById("btnGetRecommendations").style.visibility = "visible";
+
             }
 
             function AddGhostbustersToLabel() {
@@ -179,7 +197,7 @@
 
         <div class="footer">
             <div class="links">
-                <a target="blank" href="HelpPage.html">Help</a>
+                <a target="blank" href="HelpPage.aspx">Help</a>
             </div>
             <div class="footercopyright">
                 © 2020 FILM RECOMMENDER
