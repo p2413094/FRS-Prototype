@@ -760,6 +760,8 @@ th {
 .filmrecommendation-getrecommendationsbutton {
     display: flex;
     justify-content: center;
+    width: 25%;
+    margin-left: 21%;
 }
 
 .filmrecommendation-getrecommendationsbutton-buttonitself {

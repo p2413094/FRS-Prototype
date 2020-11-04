@@ -11,7 +11,7 @@
 <body class="body" onload="onload()">
     <form runat="server">
         <p class="logo textlink">
-            <a href="Homepage.html">FILM RECOMMENDER</a>
+            <a href="Homepage.aspx">FILM RECOMMENDER</a>
         </p>
 
         <br />
@@ -90,9 +90,7 @@
             <div class="textentry-field">
                 <input id="txtFilmTitle" type="text" class="textentry-fieldsize" placeholder="e.g. Top Gun" />
             </div>
-            
-         
-
+           
             <br />
             <br />
             <br />
