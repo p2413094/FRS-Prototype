@@ -12,7 +12,7 @@
     
     <form runat="server">
         <p class="logo textlink">
-            <a href="Homepage.html">FILM RECOMMENDER</a>
+            <a href="Homepage.aspx">FILM RECOMMENDER</a>
         </p>
 
         <br />
@@ -26,7 +26,7 @@
                 <div class="dropdown-content">
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/WatchLater.png">
+                        <img class="imagedimensions" src="Images/WatchLater.png" />
                     </div>
                     <a href="WatchList.aspx">WATCHLIST</a>
                     <br />
@@ -34,7 +34,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/FavouriteInList.png">
+                        <img class="imagedimensions" src="Images/FavouriteInList.png" />
                     </div>
                     <a href="FavouriteFilms.aspx">FAVOURITES</a>
                     <br /> 
@@ -42,7 +42,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/Log out.png">
+                        <img class="imagedimensions" src="Images/Log out.png" />
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
                 </div>
@@ -60,7 +60,7 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()">
+                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="searchdropdown-content">
                         <a href="FilmInformation2.aspx">The Terminator (1984)</a>
@@ -99,6 +99,8 @@
                         <th id="Actions">Actions</th>
                     </tr>
 
+
+
                     <tr id="rowToyStory">
                         <td>Toy Story</td>
                         <td>1995</td>
@@ -108,8 +110,10 @@
                             01111
                         </td>
                         <td>
-                            <button type="button" onclick="btnEdit_Clicked()" >Edit</button>
-                            <button type="button" onclick="DeleteFilm()">Delete</button>
+                            <button class="actionButton" type="button" onclick="btnEdit_Clicked()">EDIT</button>
+                            <button class="actionButton" type="button" onclick="DeleteFilm()">DELETE</button>
+                            <img src="Images/Edit%20icon.png" class="edit_icon" />
+
                         </td>
                     </tr>
 
@@ -156,7 +160,6 @@
             </div>
             <br />
             <br />
-            <button onclick="test1()" type="button">Test</button>
 
         </div>
 
@@ -174,9 +177,7 @@
                     document.getElementById("rowNewFilm").style.visibility = "hidden";
                 }
             }
-            
-                
-
+                          
             function btnAddNewFilm_Clicked() {
                 location.href = "AddFilm.aspx";
             }
@@ -230,8 +231,21 @@
             }
             }
         </script>
+        
+        <br />
+        <br />
         <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
+            <div class="links">
+                <a target="blank" href="HelpPage.aspx">Help</a>
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
         </div>
     </form>
 </body>
+</html>
