@@ -60,7 +60,7 @@
                     Email address
                 </div>
                 <div class="textentry-field">
-                    <input type="text" class="textentry-fieldsize" />
+                    <input id="txtEmailAddress" type="text" class="textentry-fieldsize" />
                 </div>
                 <br />
                 <br />
@@ -70,7 +70,7 @@
                     Password
                 </div>
                 <div class="textentry-field">
-                    <input type="password" class="textentry-fieldsize" />
+                    <input id="txtPassword" type="password" class="textentry-fieldsize" />
                     <br />
                     <br />
                     <br />
@@ -89,8 +89,37 @@
         </div>
 
         <script type="text/javascript">
+
+            function HighlightEmailAddressField() {
+                document.getElementById("txtEmailAddress").style.border="2px solid red";
+            }
+
+            function HighlightPasswordField() {
+                document.getElementById("txtPassword").style.border="2px solid red";
+            }
+
+
+
             function btnLogin_Click() {
-                location.href = "MyAccount.aspx";
+                var emailAddress = document.getElementById("txtEmailAddress").value,
+                    password = document.getElementById("txtPassword").value;
+                    count = 0;
+
+
+                if (emailAddress.length == 0) {
+                    HighlightEmailAddressField();
+                    count++;
+                }
+
+                if (password.length == 0) {
+                    HighlightPasswordField();
+                    count++;
+                }
+                
+                if (count == 0) {
+                    location.href = "MyAccount.aspx";
+
+                }
             };
             
 
@@ -121,8 +150,19 @@
             }
         }
         </script>
+    <br />
+    <br />
         <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
+            <div class="links">
+                <a target="blank" href="HelpPage.aspx">Help</a>
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
         </div>
 </body>
     </html>
