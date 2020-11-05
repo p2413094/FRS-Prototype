@@ -167,12 +167,14 @@
             }
                           
             function btnAddNewFilm_Clicked() {
+                sessionStorage.setItem("editFilm", 0);
                 location.href = "AddFilm.aspx";
             }
 
 
             function btnEdit_Clicked() {
-                document.getElementById("txtImdbid").readOnly = false;
+                sessionStorage.setItem("editFilm", 1);
+                location.href = "AddFilm.aspx";
             }
            
             function DeleteFilm() {

@@ -81,7 +81,7 @@
 
         <div class="account">
             <p class="page-header">
-                Add new film 
+                <label id="lblAddNewFilm">Add new film</label>
             </p>
 
             <div class="textentry-label">
@@ -140,7 +140,7 @@
             <br />
             <br />
             <div class="filmrecommendation-getrecommendationsbutton">
-                <button type="button" onclick="btnAddNewFilm_Click()" class="Addnewfilm-button" >ADD NEW FILM</button>
+                <button type="button" id="btnFilmAction" onclick="btnAddNewFilm_Click()" class="Addnewfilm-button" >ADD NEW FILM</button>
             </div>
        
 
@@ -150,7 +150,17 @@
         
 
         <script>       
+            var editFilm;
             function onload() {
+                editFilm = sessionStorage.getItem("editFilm");
+
+                if (editFilm == 1) {
+                    document.getElementById("lblAddNewFilm").innerText = "Edit film";
+                    document.getElementById("btnFilmAction").innerText = "Save changes";
+                    document.getElementById("txtFilmTitle").value = "Toy Story";
+                    document.getElementById("txtYearReleased").value = "1995";
+                    document.getElementById("txtGenre").value = "Animation, Adventure";
+                }
 
             }
 
@@ -159,42 +169,57 @@
             }
 
             function btnAddNewFilm_Click() {
-                var filmTitle = document.getElementById("txtFilmTitle").value,
-                    yearReleased = document.getElementById("txtYearReleased").value,
-                    genre = document.getElementById("txtGenre").value,
-                    count = 0;
+                if (editFilm != 1) {
 
-                if (filmTitle.length == 0) {
-                    document.getElementById("txtFilmTitle").style.border = "2px solid red";
-                    count++;
-                }
-                if (yearReleased.length == 0) {
-                    document.getElementById("txtYearReleased").style.border = "2px solid red";
-                    count++;
-                }
-                if (genre.length == 0) {
-                    document.getElementById("txtGenre").style.border = "2px solid red";
-                    count++;
+                    var filmTitle = document.getElementById("txtFilmTitle").value,
+                        yearReleased = document.getElementById("txtYearReleased").value,
+                        genre = document.getElementById("txtGenre").value,
+                        count = 0;
+
+                    if (filmTitle.length == 0) {
+                        document.getElementById("txtFilmTitle").style.border = "2px solid red";
+                        count++;
+                    }
+                    if (yearReleased.length == 0) {
+                        document.getElementById("txtYearReleased").style.border = "2px solid red";
+                        count++;
+                    }
+                    if (genre.length == 0) {
+                        document.getElementById("txtGenre").style.border = "2px solid red";
+                        count++;
+                    }
+
+                    if (count == 0) {
+                        var addFilm = 0;
+                        var confirmMessage = confirm("Add new film to database?");
+                        if (confirmMessage == true) {
+                            alert("Film added!");
+                            addFilm = 1;
+                            sessionStorage.setItem("addFilm", addFilm);
+                            sessionStorage.setItem("filmTitle", filmTitle);
+                            sessionStorage.setItem("yearReleased", yearReleased);
+                            sessionStorage.setItem("genre", genre);
+
+                            location.href = "AllFilms.aspx";
+                        }
+
+                        else {
+                            alert("Film not added");
+                        }
+                    }
                 }
 
-                if (count == 0) {
-                    var addFilm = 0;
-                    var confirmMessage = confirm("Add new film to database?");
-                    if (confirmMessage == true) {
-                        alert("Film added!");
-                        addFilm = 1;
-                        sessionStorage.setItem("addFilm", addFilm);
-                        sessionStorage.setItem("filmTitle", filmTitle);
-                        sessionStorage.setItem("yearReleased", yearReleased);
-                        sessionStorage.setItem("genre", genre);
-
+                else {
+                    var confirmMessage2 = confirm("Update film record?");
+                    if (confirmMessage2 == true) {
+                        alert("Film updated!");
                         location.href = "AllFilms.aspx";
                     }
-
                     else {
-                        alert("Film not added");
+                        alert("Film not updated");
                     }
                 }
+                
                           
             }
 
