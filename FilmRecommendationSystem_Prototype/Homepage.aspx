@@ -89,7 +89,8 @@
             <label id="lblFilmsAdded">Films added:</label>
             <br />
             <br />
-            <button id="btnGetRecommendations" onclick="GetRecommendations()" class="getrecommendations-button" type="button">GET RECOMMENDATIONS</button>
+            <button id="btnGetRecommendations" onclick="GetRecommendations()" class="getrecommendations-button" 
+                type="button">GET RECOMMENDATIONS</button>
 
         </div>
 
@@ -123,6 +124,23 @@
             <img src="Images/TCM.jpg" class="image" />
             <img src="Images/Dunkirk.jpg" class="image" />
             <img src="Images/District 9.jpg" class="image" />
+            <img src="Images/Tron Legacy.jpg" class="image" />
+            <img src="Images/Ghostbusters.jpg" class="image" />
+        </section>
+
+        <br />
+        <br />
+        <br />
+        <div class="homepage-mostRecommendedFilms">
+            User favourite films
+        </div>
+
+        <section class="watchlist">
+            <img src="Images/Endgame.jpg" class="image" />
+            <img src="Images/Nosferatu.jpg" class="image" />
+            <img src="Images/Bridesmaids.jpg" class="image" />
+            <img src="Images/The World's End.jpg" class="image" />
+            <img src="Images/Dunkirk.jpg" class="image" />
             <img src="Images/Tron Legacy.jpg" class="image" />
             <img src="Images/Ghostbusters.jpg" class="image" />
         </section>

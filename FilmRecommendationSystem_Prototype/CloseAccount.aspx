@@ -25,7 +25,7 @@
                 <div class="dropdown-content">
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/WatchLater.png">
+                        <img class="imagedimensions" src="Images/WatchLater.png" />
                     </div>
                     <a href="WatchList.aspx">WATCHLIST</a>
                     <br />
@@ -33,7 +33,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/FavouriteInList.png">
+                        <img class="imagedimensions" src="Images/FavouriteInList.png" />
                     </div>
                     <a href="FavouriteFilms.aspx">FAVOURITES</a>
                     <br /> S
@@ -41,7 +41,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/Log out.png">
+                        <img class="imagedimensions" src="Images/Log out.png" />
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
                 </div>
@@ -59,7 +59,8 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()">
+                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" 
+                    id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="searchdropdown-content">
                         <a href="FilmInformation2.aspx">The Terminator (1984)</a>
@@ -76,10 +77,11 @@
         <br />
         <br />
         <br />
+        <p class="page-header">
+            Close account
+        </p>
         <div class="account">
-            <p class="page-header">
-                Close account 
-            </p>
+            
             <p class="page-subheader">
                 Are you sure you want to delete your account?  
             </p>

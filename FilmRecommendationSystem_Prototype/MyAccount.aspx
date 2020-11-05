@@ -27,7 +27,7 @@
                 <div class="dropdown-content">
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/RecommendedFilms.png">
+                        <img class="imagedimensions" src="Images/RecommendedFilms.png" />
                     </div>
                     <a href="RecommendedFilms.aspx">RECOMMENDATIONS</a>
                     <br />
@@ -35,7 +35,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/WatchLater.png">
+                        <img class="imagedimensions" src="Images/WatchLater.png" />
                     </div>
                     <a href="WatchList.aspx">WATCHLIST</a>
                     <br />
@@ -43,7 +43,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/FavouriteInList.png">
+                        <img class="imagedimensions" src="Images/FavouriteInList.png" />
                     </div>
                     <a href="FavouriteFilms.aspx">FAVOURITES</a>
                     <br />
@@ -51,7 +51,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/Log out.png">
+                        <img class="imagedimensions" src="Images/Log out.png" />
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
                     <br />
@@ -72,7 +72,7 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()">
+                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="searchdropdown-content">
                         <a href="FilmInformation.aspx">The Terminator (1984)</a>
@@ -123,11 +123,10 @@
 
                 <div>
                     <div class="changepasswordcontainer">
-                        <img class="changepasswordicon" id="imgChangePassword" onclick="imgChangePassword_Click()"
-                            src="Images/Edit icon.png">
+                        <img class="changepasswordicon" id="imgChangePassword" onclick="imgChangePassword_Click()" 
+                            src="Images/Edit icon.png" />
                     </div>
                 </div>
-
                 <br />
                 <br />
                 <br />
@@ -137,14 +136,13 @@
                         Last login: 11:38, 20/09/20
                     </div>
                 </div>
-
-
             </section>
-            <br />
-            <br />
         </div>
+        
+        <br />
         <br />
         <button type="button" id="btnCloseAccount" onclick="btnCloseAccount_Click()"  class="closeaccountbutton">CLOSE ACCOUNT</button>
+        <br />
 
         <div class="footer">
             © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
