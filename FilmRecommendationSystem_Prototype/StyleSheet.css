@@ -143,7 +143,7 @@ a {
     .account .registerbutton {
         display: flex;
         justify-content: center;
-        height: 50px;
+        line-height: 50px;
         width: 200px;
         font-family: Open Sans, Arial, Helvetica, sans-serif;
         font-size: small;

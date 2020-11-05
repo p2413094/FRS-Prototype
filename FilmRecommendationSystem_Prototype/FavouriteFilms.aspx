@@ -78,27 +78,26 @@
         <div class="page-header">
             My favourite films  
         </div>  
-        <section class="film">
         <br />
         <br />
 
         <div id="filmToBeRemoved" class="newwatchlist">
-            <img src="Images/Dune.jpg" class="image">
+            <img src="Images/Dune.jpg" class="image" />
             <div class="overlay">
-                <img id="imgRemove" onclick="imgRemoveClick()" class="watchlatericon" src="Images/Remove.png">
+                <img id="imgRemove" onclick="imgRemoveClick()" class="watchlatericon" src="Images/Remove.png" />
             </div>
         </div>
         
         <section class="watchlist">
             <a href="FilmInformation.aspx">
-                <img src="Images/Terminator 2.jpg" class="image">
+                <img src="Images/Terminator.jpg" class="image" />
             </a>
-            <img src="Images/Aliens.jpg" class="image">
-            <img src="Images/TCM.jpg" class="image">
-            <img src="Images/Dunkirk.jpg" class="image">
-            <img src="Images/District 9.jpg" class="image">
-            <img src="Images/Tron Legacy.jpg" class="image">
-            <img src="Images/Ghostbusters.jpg" class="image">
+            <img src="Images/Aliens.jpg" class="image" />
+            <img src="Images/TCM.jpg" class="image" />
+            <img src="Images/Dunkirk.jpg" class="image" />
+            <img src="Images/District 9.jpg" class="image" />
+            <img src="Images/Tron Legacy.jpg" class="image" />
+            <img src="Images/Ghostbusters.jpg" class="image" />
         </section>
 
         
@@ -126,9 +125,7 @@
             }}
 
             function imgRemoveClick() {
-                document.getElementById("imgRemove").onclick = function () {
-                    document.getElementById("filmToBeRemoved").style.visibility="hidden";
-            };
+                document.getElementById("filmToBeRemoved").style.display = "none";
             }
         </script>
          
@@ -146,4 +143,4 @@
         </div>
     </form>
 </body>
-    </html>
+</html>

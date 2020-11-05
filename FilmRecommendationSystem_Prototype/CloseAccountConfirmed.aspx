@@ -29,7 +29,7 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()">
+                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="FilmInformation2.aspx">The Terminator (1984)</a>
@@ -56,7 +56,7 @@
             <p class="page-subheader">
                 Your account was successfully deleted  
             </p>
-                        <br />
+            <br />
             <br />
             <button type="button" onclick="btnReturnToHomepage_Click()" class="deleteaccountbutton" id="btnReturnToHomepage">Return to homepage</button>
 
@@ -92,8 +92,17 @@
         </script>
         
         <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
+            <div class="links">
+                <a target="blank" href="HelpPage.aspx">Help</a>
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
         </div>
     </form>
 </body>
-
+</html>
