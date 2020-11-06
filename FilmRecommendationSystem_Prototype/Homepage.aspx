@@ -70,8 +70,6 @@
             <p class="homepage-subHeader">
                 Enter a film you like to get started...
             </p>
-            <br />
-
             
                 <div class="filmSearch-dropdown">
                     <input type="text" id="filmName" onkeyup="filterFunction()" />
@@ -108,11 +106,6 @@
             <img src="Images/Ghostbusters.jpg" class="image" />
         </section>
 
-
-
-
-        <br />
-        <br />
         <br />
         <div class="homepage-mostRecommendedFilms">
             Most recommended films
