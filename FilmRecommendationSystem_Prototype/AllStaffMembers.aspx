@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="StyleSheet.css" />
 </head>
 
-<body class="body">
+<body class="body" onload="onLoad()" >
     <form runat="server">
         <p class="logo textlink">
             <a href="Homepage.aspx">FILM RECOMMENDER</a>
@@ -78,8 +78,18 @@
         <br />
         <div class="account">
             <p class="page-header">
-                All staff members 
+                All staff members
             </p>
+            <br />
+            <br />
+            <img src="Images/Add_plus icon.png" class="allstaffmembers-add" onclick="imgAdd_Clicked()" />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
             <div>
                 <table>
@@ -90,7 +100,7 @@
                         <th id="PrivilegeLevel">Privilege level</th>
                         <th id="Confirmed">Confirmed?</th>                 
                         <th id="Suspended">Suspended?</th>
-                        
+                        <th id="Actions">Actions</th>
                     </tr>
 
                     <tr id="rowHouse">
@@ -116,9 +126,26 @@
                         <td>Hadley</td>
                         <td>Administrator</td>
                         <td>Y</td>
-                        
                         <td>Y</td>
                         <td></td>
+                        
+                    </tr>
+
+                    <tr id="rowAdd">
+                        <td>#14</td>
+                        <td>
+                            <input type="text" class="textbox-transparent" id="txtAddFirstName"/>
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-transparent" id="txtAddLastName"/>
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-transparent" id="txtAddPrivilegeLevel"/>
+                        </td>
+                        <td>N</td>
+                        <td>N</td>
+                        <td>
+                        </td>
                     </tr>
                 
                 </table>
@@ -132,6 +159,16 @@
             var count = 0,
                 suspended = false;
 
+            function onLoad() {
+                document.getElementById("rowAdd").style.visibility = "hidden";
+            }
+
+            function imgAdd_Clicked() {
+                document.getElementById("rowAdd").style.visibility = "visible";
+                //document.getElementById("txtAddFirstName").style.border = "1px solid white";
+                document.getElementById("txtAddLastName").style.border = "1px solid white";
+                document.getElementById("txtAddPrivilegeLevel").style.border = "1px solid white";
+            }
 
 
             function btnEdit_Clicked() {
