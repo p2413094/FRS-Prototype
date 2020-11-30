@@ -106,7 +106,7 @@
                     <tr id="rowHouse">
                         <td>#1</td>
                         <td>
-                            <input class="textbox-transparent" value="Greg" readonly="true" id="txtFirstName" type="text"/>
+                            <input class="textbox-semitransparent" value="Greg" readonly="true" id="txtFirstName" type="text"/>
                         </td>
                         <td>House</td>
                         <td>Standard</td>
@@ -134,17 +134,18 @@
                     <tr id="rowAdd">
                         <td>#14</td>
                         <td>
-                            <input type="text" class="textbox-transparent" id="txtAddFirstName"/>
+                            <input type="text" class="textbox-semitransparent" id="txtAddFirstName"/>
                         </td>
                         <td>
-                            <input type="text" class="textbox-transparent" id="txtAddLastName"/>
+                            <input type="text" class="textbox-semitransparent" id="txtAddLastName"/>
                         </td>
                         <td>
-                            <input type="text" class="textbox-transparent" id="txtAddPrivilegeLevel"/>
+                            <input type="text" class="textbox-semitransparent" id="txtAddPrivilegeLevel"/>
                         </td>
                         <td>N</td>
                         <td>N</td>
-                        <td>
+                        <td class="tablecell-actions" id="cellTableActions">
+                            <img src="Images/Green tick_save.png" class="action_icon" onclick="btnSave_Clicked()" />
                         </td>
                     </tr>
                 
@@ -165,11 +166,20 @@
 
             function imgAdd_Clicked() {
                 document.getElementById("rowAdd").style.visibility = "visible";
-                //document.getElementById("txtAddFirstName").style.border = "1px solid white";
-                document.getElementById("txtAddLastName").style.border = "1px solid white";
-                document.getElementById("txtAddPrivilegeLevel").style.border = "1px solid white";
             }
 
+            function btnSave_Clicked() {
+                var confirmMessage = confirm("Are you sure you want to add a new staff member?");
+                if (confirmMessage == true) {
+                    alert("Staff member added!");
+                    document.getElementById("txtAddFirstName").className = "textbox-transparent";
+                    document.getElementById("txtAddLastName").className = "textbox-transparent";   
+                    document.getElementById("txtAddPrivilegeLevel").className = "textbox-transparent";   
+                }
+                else {
+                    alert("Staff member was not added");
+                }
+            }
 
             function btnEdit_Clicked() {
                 //location.href = "EditUser.aspx";
@@ -193,17 +203,6 @@
 
             }           
 
-            function imgDelete_Clicked() {
-                document.getElementById("rowHouse").style.display = "none";
-                var confirmMessage = confirm("Delete staff member?");
-                if (confirmMessage == true) {
-                    alert("Staff member deleted");
-                }
-                else {
-                    alert("Staff member was not deleted");
-                }
-            }
-            
             function btnSuspend_Clicked() {
                 if (suspended == true) {
                     var confirmMessage = confirm("Un-suspend staff member?");
@@ -230,6 +229,17 @@
                 }
             }
 
+            function imgDelete_Clicked() {
+                document.getElementById("rowHouse").style.display = "none";
+                var confirmMessage = confirm("Delete staff member?");
+                if (confirmMessage == true) {
+                    alert("Staff member deleted");
+                }
+                else {
+                    alert("Staff member was not deleted");
+                }
+            }
+            
 
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */

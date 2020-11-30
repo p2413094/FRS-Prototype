@@ -829,7 +829,7 @@ td {
 }
 
 
-.textbox-transparent {
+.textbox-semitransparent {
     background: none;
     color: white;
     border: 0px none;
@@ -837,6 +837,12 @@ td {
     border-color: white;
     border-width: 1px;
     border-radius: 4px;
+}
+
+.textbox-transparent {
+    background: none;
+    color: white;
+    border: 0px none;
 }
 
 .allstaffmembers-add {
