@@ -469,19 +469,10 @@ td {
 }
 
 
-
-
-
 .container-tableaction:hover {
     opacity: 0.1;
 }
 
-
-.textbox-transparent {
-    background: none;
-    color: red;
-    border-style: solid;
-}
 
 .Addnewfilm-button {
     display: flex;
@@ -834,4 +825,11 @@ td {
 .getrecommendations-button {
     background-color: limegreen;
     line-height: 60px;
+}
+
+
+.textbox-transparent {
+    background: none;
+    color: white;
+    border: 0px none;
 }
