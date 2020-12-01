@@ -29,7 +29,7 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()">
+                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="FilmInformation2.aspx">The Terminator (1984)</a>
@@ -54,6 +54,14 @@
             <p class="page-header">
                 Reset password
             </p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <div>
                 Enter in a new password and then confirm it. 
             </div>
@@ -75,7 +83,7 @@
                     Confirm password
                 </div>
                 <div class="textentry-field">
-                    <input type="password" class="textentry-fieldsize">
+                    <input type="password" class="textentry-fieldsize" />
                     <br />
                     <br />
                     <br />

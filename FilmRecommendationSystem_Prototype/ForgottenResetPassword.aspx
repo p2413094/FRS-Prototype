@@ -55,6 +55,11 @@
             </p>
             <br />
             <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             
             <p>
                 If you've forgotten your password or need to reset it, enter your account email
@@ -76,7 +81,7 @@
                     <br />
                     <br />
                 </div>
-                <br />
+                <br />  
                 <br />
                 <br />
                
@@ -103,10 +108,12 @@
         
     </form>
     <script type="text/javascript">
+
+
         function btnResetPassword_Click() {
-            document.getElementById("btnResetPassword").onclick = function () {
-                location.href = "ForgottenResetPasswordConfirmation.aspx";
-        };
+            alert("If an account exists, you'll receive an email with a link to reset your password.");
+            location.href = "Login.aspx";
+
         }
 
         /* When the user clicks on the button,
