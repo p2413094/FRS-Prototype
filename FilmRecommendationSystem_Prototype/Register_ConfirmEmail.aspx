@@ -29,7 +29,7 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()">
+                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="FilmInformation2.aspx">The Terminator (1984)</a>
@@ -55,25 +55,30 @@
             </p>
             <br />
             <br />
-            <div class="text">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
                 An email has been sent to the email address you specified.
                 Once you've got the email, simply click on verify and you're
                 then free to use the service!
-            </div>
             <br />
             <br />
             <div>
                 <button type="button" onclick="btnOk_Click()" id="btnOk" class="okbutton">Ok</button>
             </div>
             <br />
+            <br />
+            </div>
 
         <br />
         <br />
         <script>
             function btnOk_Click() {
-                document.getElementById("btnOk").onclick = function () {
-                    location.href = "Homepage.aspx";
-            }};
+                location.href = "Homepage.aspx";
+            }
 
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */

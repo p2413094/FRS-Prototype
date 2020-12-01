@@ -56,6 +56,12 @@
             </p>
             <br />
             <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <div class="text">
                 <p class="page-subheader">
                     What do you get when you register with us?
@@ -154,9 +160,7 @@
     </form>
     <script type="text/javascript">
         function btnRegister_Click() {
-            document.getElementById("btnRegister").onclick = function () {
                 location.href = "Register_ConfirmEmail.aspx";
-        };
         }
 
         /* When the user clicks on the button,
