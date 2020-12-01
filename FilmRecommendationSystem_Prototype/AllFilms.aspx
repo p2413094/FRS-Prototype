@@ -79,10 +79,11 @@
         <br />
         <div class="account">
             <p class="page-header">
-                All films 
+                All films
             </p>
-
-            <button class="Addnewfilm-button" onclick="btnAddNewFilm_Clicked()" type="button">ADD NEW FILM</button>
+            <br />
+            <br />
+            <img src="Images/Add_plus icon.png" class="allstaffmembers-add" onclick="imgAdd_Clicked()" />
             
             <br />
             <br />
@@ -135,17 +136,31 @@
                         <td>Cars</td>
                         <td>2006</td>
                         <td>Animation, Comedy, Disney</td>
-                        <td></td>
+                        <td>tt0317219</td>
                         <td>9806</td>
                       
                     </tr>
 
-                    <tr id="rowNewFilm">
-                        <td><label id="lblFilmTitle"></label></td>
-                        <td><label id="lblYearReleased"></label></td>
-                        <td><label id="lblGenre"></label></td>
-                        <td></td>
-                        <td></td>
+                    <tr id="rowAdd">
+                        <td>
+                            <input type="text" class="textbox-semitransparent" id="txtAddTitle"/>
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-semitransparent" id="txtAddYearReleased"/>
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-semitransparent" id="txtAddGenre"/>
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-semitransparent" id="txtAddImdbId"/>
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-semitransparent" id="txtAddTmImdbId"/>
+                        </td>
+
+                        <td class="tablecell-actions" id="cellTableActions">
+                            <img src="Images/Green tick_save.png" class="action_icon" onclick="btnSave_Clicked()" />
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -162,20 +177,14 @@
             var count = 0;
 
             function onLoad() {
-
-                
+                document.getElementById("rowAdd").style.visibility = "hidden";
             }
                           
-            function btnAddNewFilm_Clicked() {
-                sessionStorage.setItem("editFilm", 0);
-                location.href = "AddFilm.aspx";
+            function imgAdd_Clicked() {
+                document.getElementById("rowAdd").style.visibility = "visible";
             }
 
-
             function btnEdit_Clicked() {
-                //sessionStorage.setItem("editFilm", 1);
-                //location.href = "AddFilm.aspx";
-                
                 if (count == 0) {
                     document.getElementById("txtTitle").className = "textbox-semitransparent";
                     document.getElementById("txtTitle").readOnly = false;
@@ -218,14 +227,39 @@
                     document.getElementById("txtIMDB").className = "textbox-transparent";
                     document.getElementById("txtIMDB").readOnly = true;
 
-                    document.getElementById("txtTmIMDB").className = "textbox-transparent";
+                    document.tElementById("txtTmIMDB").className = "textbox-transparent";
                     document.getElementById("txtTmIMDB").readOnly = true;
 
                     count = 0;
-                }
-                
+                }              
             }
           
+            function btnSave_Clicked() {
+                var confirmMessage = confirm("Are you sure you want to add a new new film?");
+                if (confirmMessage == true) {
+                    alert("Film added!");                   
+                    document.getElementById("txtAddTitle").className = "textbox-transparent";
+                    document.getElementById("txtAddTitle").readOnly = true;
+
+                    document.getElementById("txtAddYearReleased").className = "textbox-transparent";
+                    document.getElementById("txtAddYearReleased").readOnly = true;
+
+                    document.getElementById("txtAddGenre").className = "textbox-transparent";
+                    document.getElementById("txtAddGenre").readOnly = true;
+
+                    document.getElementById("txtAddImdbId").className = "textbox-transparent";
+                    document.getElementById("txtAddImdbId").readOnly = true;
+
+                    document.getElementById("txtAddTmImdbId").className = "textbox-transparent";
+                    document.getElementById("txtAddTmImdbId").readOnly = true;                
+                }
+                else {
+                    alert("Film was not added");
+                }
+            }
+
+
+
             function DeleteFilm() {
                 var confirmMessage = confirm("Delete film?");
                 if (confirmMessage == true) {

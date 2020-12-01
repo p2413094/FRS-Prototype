@@ -475,17 +475,6 @@ td {
 }
 
 
-.Addnewfilm-button {
-    display: flex;
-    justify-content: center;
-    line-height: 50px;
-    width: 200px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
-    font-size: small;
-    background-color: transparent;
-    color: white;
-}
-
 .myaccount {
     width: 506px;
     height: 220px;
