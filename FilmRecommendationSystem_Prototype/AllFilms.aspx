@@ -100,16 +100,24 @@
                     </tr>
 
                     <tr id="rowToyStory">
-                        <td>Toy Story</td>
-                        <td>1995</td>
-                        <td>Adventure, animation</td>
-                        <td>0114709</td>
                         <td>
-                            01111
+                            <input type="text" class="textbox-transparent" value="Toy Story" readonly="true" id="txtTitle" />
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-transparent" value="1995" readonly="true" id="txtYearReleased" />
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-transparent" value="Adventure, animation" readonly="true" id="txtGenre" />
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-transparent" value="0114709" readonly="true" id="txtIMDB" />
+                        </td>
+                        <td>
+                            <input type="text" class="textbox-transparent" value="01111" readonly="true" id="txtTmIMDB" />                         
                         </td>
                         
                         <td class="tablecell-actions" id="cellTableActions">
-                            <img src="Images/Edit%20icon.png" class="action_icon" onclick="btnEdit_Clicked()" />
+                            <img src="Images/Edit%20icon.png" class="action_icon" onclick="btnEdit_Clicked()" id="icnEdit" />
                             <img src="Images/TrashCan.png" class="action_icon" onclick="DeleteFilm()" />
                         </td>
                         
@@ -151,19 +159,11 @@
         </div>
 
         <script>
+            var count = 0;
 
             function onLoad() {
 
-                var addFilm = sessionStorage.getItem("addFilm");
-
-                if (addFilm != 0) {
-                    document.getElementById("lblFilmTitle").innerHTML = sessionStorage.getItem("filmTitle");
-                    document.getElementById("lblYearReleased").innerHTML = sessionStorage.getItem("yearReleased");
-                    document.getElementById("lblGenre").innerHTML = sessionStorage.getItem("genre");
-                }
-                else {
-                    document.getElementById("rowNewFilm").style.visibility = "hidden";
-                }
+                
             }
                           
             function btnAddNewFilm_Clicked() {
@@ -173,10 +173,59 @@
 
 
             function btnEdit_Clicked() {
-                sessionStorage.setItem("editFilm", 1);
-                location.href = "AddFilm.aspx";
+                //sessionStorage.setItem("editFilm", 1);
+                //location.href = "AddFilm.aspx";
+                
+                if (count == 0) {
+                    document.getElementById("txtTitle").className = "textbox-semitransparent";
+                    document.getElementById("txtTitle").readOnly = false;
+
+                    document.getElementById("txtYearReleased").className = "textbox-semitransparent";
+                    document.getElementById("txtYearReleased").readOnly = false;
+
+                    document.getElementById("txtGenre").className = "textbox-semitransparent";
+                    document.getElementById("txtGenre").readOnly = false;
+
+                    document.getElementById("txtIMDB").className = "textbox-semitransparent";
+                    document.getElementById("txtIMDB").readOnly = false;
+
+                    document.getElementById("txtTmIMDB").className = "textbox-semitransparent";
+                    document.getElementById("txtTmIMDB").readOnly = false;
+
+                    document.getElementById("icnEdit").src = "Images/Green%20tick_save.png";
+
+                    count++;
+                }
+                else {
+                    var confirmMessage = confirm("Are you sure you want to update the record?");
+                    if (confirmMessage == true) {
+                        alert("Record updated");                     
+                    }
+                    else {
+                        alert("Record was not updated");
+                        
+                    }
+                    document.getElementById("icnEdit").src = "Images/Edit%20icon.png";
+                    document.getElementById("txtTitle").className = "textbox-transparent";
+                    document.getElementById("txtTitle").readOnly = true;
+
+                    document.getElementById("txtYearReleased").className = "textbox-transparent";
+                    document.getElementById("txtYearReleased").readOnly = true;
+
+                    document.getElementById("txtGenre").className = "textbox-transparent";
+                    document.getElementById("txtGenre").readOnly = true;
+
+                    document.getElementById("txtIMDB").className = "textbox-transparent";
+                    document.getElementById("txtIMDB").readOnly = true;
+
+                    document.getElementById("txtTmIMDB").className = "textbox-transparent";
+                    document.getElementById("txtTmIMDB").readOnly = true;
+
+                    count = 0;
+                }
+                
             }
-           
+          
             function DeleteFilm() {
                 var confirmMessage = confirm("Delete film?");
                 if (confirmMessage == true) {
