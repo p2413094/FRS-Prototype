@@ -25,7 +25,7 @@
                 <div class="dropdown-content">
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/WatchLater.png">
+                        <img class="imagedimensions" src="Images/WatchLater.png" />
                     </div>
                     <a href="WatchList.aspx">WATCHLIST</a>
                     <br />
@@ -33,7 +33,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/FavouriteInList.png">
+                        <img class="imagedimensions" src="Images/FavouriteInList.png" />
                     </div>
                     <a href="FavouriteFilms.aspx">FAVOURITES</a>
                     <br />
@@ -41,7 +41,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/Log out.png">
+                        <img class="imagedimensions" src="Images/Log out.png" />
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
                 </div>
@@ -59,7 +59,7 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()">
+                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="searchdropdown-content">
                         <a href="FilmInformation2.aspx">The Terminator (1984)</a>
@@ -86,26 +86,28 @@
         
         <br />
         <br />
+        <br />
+        <br />
+
 
         <div id="filmToBeRemoved" class="newwatchlist">
-            <img src="Images/The World's End.jpg" class="image">
+            <img src="Images/The World's End.jpg" class="image" />
             <div class="overlay">
-                <img id="imgRemove" onclick="imgRemoveClick()" class="watchlatericon" src="Images/Remove.png">
+                <img id="imgRemove" onclick="imgRemoveClick()" class="watchlatericon" src="Images/Remove.png" />
             </div>
         </div>
         
         
         <section class="watchlist">
             <a href="FilmInformation.html">
-                <img src="Images/Terminator 2.jpg" class="image">
+                <img src="Images/Terminator 2.jpg" class="image" />
             </a>
-            <img src="Images/Endgame.jpg" class="image">
-            <img src="Images/Nosferatu.jpg" class="image">
-            <img src="Images/The Wolf of Wall Street.jpg" class="image">
-            <img src="Images/Bridesmaids.jpg" class="image">
-            <img src="Images/King Kong.jpg" class="image">
-            <img src="Images/The World's End.jpg" class="image">
-            <img src="Images/Casablanca.jpg" class="image">
+            <img src="Images/Endgame.jpg" class="image" />
+            <img src="Images/Nosferatu.jpg" class="image" />
+            <img src="Images/The Wolf of Wall Street.jpg" class="image" />
+            <img src="Images/Bridesmaids.jpg" class="image" />
+            <img src="Images/King Kong.jpg" class="image" />
+            <img src="Images/Casablanca.jpg" class="image" />
         </section>
 
         <script>
@@ -132,9 +134,7 @@
             }
 
             function imgRemoveClick() {
-                document.getElementById("imgRemove").onclick = function () {
-                    document.getElementById("filmToBeRemoved").style.visibility="hidden";
-            };
+                document.getElementById("filmToBeRemoved").style.display = "none";
             }
         </script>
 
