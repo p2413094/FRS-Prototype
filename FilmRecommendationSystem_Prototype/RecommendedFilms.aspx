@@ -29,7 +29,7 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()">
+                <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="FilmInformation.aspx">The Terminator (1984)</a>
@@ -40,8 +40,6 @@
                 <br />
             </div>
         </section>
-
-
         
         <br />
         <br />
@@ -56,25 +54,28 @@
         <div class="page-header">
             My recommended films  
         </div>  
-        <section class="film">
+        <br />
+        <br />
         <br />
         <br />
         
         <section class="watchlist">
-            <a href="TheTerminator.aspx">
-                <img src="Images/Terminator.jpg" class="image">
+            <a href="FilmInformation.aspx">
+                <img src="Images/Terminator.jpg" class="image" />
             </a>
-            <img src="Images/Alien.jpg" class="image">
-            <img src="Images/Raiders of the Lost Ark.jpg" class="image">
-            <img src="Images/The Shawshank Redemption.jpg" class="image">
-            <img src="Images/The Bridge on the River Kwai.jpg" class="image">
+            <img src="Images/Alien.jpg" class="image" />
+            <img src="Images/Raiders of the Lost Ark.jpg" class="image" />
+            <img src="Images/The Shawshank Redemption.jpg" class="image" />
+            <img src="Images/Parasite.jpg" class="image" />
+            <img src="Images/The Bridge on the River Kwai.jpg" class="image" />
+
         </section>
 
         <script>
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */
             function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+                document.getElementById("myDropdown").classList.toggle("show");
             }
 
             function filterFunction() {
