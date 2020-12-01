@@ -80,6 +80,8 @@
         </div>  
         <br />
         <br />
+        <br />
+        <br />
 
         <div id="filmToBeRemoved" class="newwatchlist">
             <img src="Images/Dune.jpg" class="image" />

@@ -78,7 +78,7 @@
                     <div class="tag-container">
                         <div class="tag-heading">My tags: </div>
                         <div id="divTags" class="tags">
-                            emotional, greatest, incredible
+                            action, 
                             
                         </div>
                         <br />
@@ -91,13 +91,8 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
-                
-
-
+            
             <div class="filminformation">
                 <div class="information-header">Description</div>
                 <br />
@@ -129,34 +124,26 @@
 
         <script type="text/javascript">
             function imgWatchLaterClick() {
-                document.getElementById("imgWatchLater").onclick = function () {
                     document.getElementById("imgWatchLater").src = "Images/WatchLaterAdded.png";
-                }
             }
 
             function imgFavouriteClick() {
-                document.getElementById("imgFavourite").onclick = function () {
                     document.getElementById("imgFavourite").src = "Images/FavouriteInList.png";
-                }
             }
 
             function imgRatingClick() {
-                document.getElementById("imgRating").onclick = function () {
                     document.getElementById("star1").src = "Images/FavouriteInList.png";
                     document.getElementById("star2").src = "Images/FavouriteInList.png";
                     document.getElementById("star3").src = "Images/FavouriteInList.png";
                     document.getElementById("star4").src = "Images/FavouriteInList.png";
                     document.getElementById("star5").src = "Images/FavouriteInList.png";
-                }
             }
 
             function btnAddTagClick() {
-                document.getElementById("btnAddTag").onclick = function () {
                     var newTag = document.getElementById("txtTag").value;
                     var tags = document.getElementById("divTags");
                     tags.innerHTML += newTag;
-                }
-            };
+            }
         </script>
 
         <div class="footer">
