@@ -65,6 +65,14 @@
                 <br />
                 <br />
                 <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+
+
 
                 <div class="textentry-label">
                     Password
@@ -76,7 +84,9 @@
                     <br />
                     <button type="button" class="okbutton" onclick="btnLogin_Click()" id="btnLogin">Log in</button>
                     <br />
-                    <button type="button" class="okbutton" onclick="btnLoginStaffMember_Click()" id="btnLoginStaffMember">Login as staff member</button>
+                    <button type="button" class="okbutton" onclick="btnLoginStaffMember_Click()" id="btnLoginStaffMember">Staff member login</button>
+                    <br />
+                    <button type="button" class="okbutton" onclick="btnLoginAdmin_Click()">Administrator log in</button>
                     <br />
                     <a href="ForgottenResetPassword.aspx">Forgot/ need to reset password?</a>
 
@@ -88,45 +98,19 @@
 
         </div>
 
-        <script type="text/javascript">
-
-            function HighlightEmailAddressField() {
-                document.getElementById("txtEmailAddress").style.border="2px solid red";
-            }
-
-            function HighlightPasswordField() {
-                document.getElementById("txtPassword").style.border="2px solid red";
-            }
-
-
-
-            function btnLogin_Click() {
-                var emailAddress = document.getElementById("txtEmailAddress").value,
-                    password = document.getElementById("txtPassword").value;
-                    count = 0;
-
-
-                if (emailAddress.length == 0) {
-                    HighlightEmailAddressField();
-                    count++;
-                }
-
-                if (password.length == 0) {
-                    HighlightPasswordField();
-                    count++;
-                }
-                
-                if (count == 0) {
-                    location.href = "MyAccount.aspx";
-
-                }
-            };
+        <script type="text/javascript">     
             
-
+            function btnLogin_Click() {
+                location.href = "MyAccount.aspx";
+            }
+            
             function btnLoginStaffMember_Click() {
                 location.href = "MyAccountStaffMember.aspx";
             }
             
+            function btnLoginAdmin_Click() {
+                location.href = "MyAccountAdministrator.aspx";
+            }
 
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */

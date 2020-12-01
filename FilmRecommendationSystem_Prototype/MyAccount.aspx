@@ -93,8 +93,10 @@
         <br />
         <br />
         <br />
-        <div class="page-header1">
-            My account
+        <div class="account">
+            <p class="page-header">
+                My account
+            </p>
         </div>
 
         <br />
