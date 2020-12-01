@@ -77,11 +77,23 @@
         <br />
         <br />
         <br />
-        <p class="page-header">
-            Close account
-        </p>
         <div class="account">
-            
+            <p class="page-header">
+                Close account
+            </p>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="account">            
             <p class="page-subheader">
                 Are you sure you want to delete your account?  
             </p>
@@ -118,10 +130,12 @@
             function QuestionDeleteAccount() {
                 var confirmMessage = confirm("Are you sure you want to delete your account?");
                 if (confirmMessage == true) {
-                    location.href="CloseAccountConfirmed.aspx";
+                    alert("Your account has been successfully deleted")
+                    location.href="Homepage.aspx";
                 }
                 else {
-                    document.getElementById("lblTest").innerHTML = "Clicked No";
+                    alert("Your account was not deleted");
+                    location.href = "MyAccount.aspx";
 
                 }
             }

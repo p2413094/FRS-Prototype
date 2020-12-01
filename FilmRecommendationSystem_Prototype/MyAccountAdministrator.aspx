@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MyAccount.aspx.cs" Inherits="MyAccount" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MyAccountAdministrator.aspx.cs" Inherits="MyAccountAdministrator" %>
 
 <!DOCTYPE html>
 
@@ -21,7 +21,7 @@
         <br />
         <div class="navbar">
             <div class="dropdown">
-                <button class="dropbtn">MY ACCOUNT 
+                <button id="btnMyAccount" onclick="btnMyAccount_Clicked()" class="dropbtn">MY ACCOUNT 
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -89,10 +89,6 @@
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div class="account">
             <p class="page-header">
                 My account
@@ -107,8 +103,25 @@
         <br />
         <br />
         <br />
+        <br />
+        <br />
+
+        <button type="button" onclick="btnViewUsers_Clicked()" class="myaccount-options">VIEW ALL USERS</button>
+        <br />
+        <br />
+        <button type="button" onclick="btnViewStaffMembers_Clicked()" class="myaccount-options">VIEW ALL STAFF MEMBERS</button>
+        <br />
+        <br />
+        <button type="button" onclick="btnViewFilms_Clicked()" class="myaccount-options">VIEW ALL FILMS</button>
 
 
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <div class="myaccount">
             <section>
                 <p class="header">Account details</p>
@@ -131,10 +144,11 @@
 
                 <div>
                     <div class="changepasswordcontainer">
-                        <img class="changepasswordicon" id="imgChangePassword" onclick="imgChangePassword_Click()" 
-                            src="Images/Edit icon.png" />
+                        <img class="changepasswordicon" id="imgChangePassword" onclick="imgChangePassword_Click()"
+                            src="Images/Edit icon.png">
                     </div>
                 </div>
+
                 <br />
                 <br />
                 <br />
@@ -144,30 +158,40 @@
                         Last login: 11:38, 20/09/20
                     </div>
                 </div>
+
+
             </section>
+            <br />
+            <br />
         </div>
-        
-        <br />
         <br />
         <button type="button" id="btnCloseAccount" onclick="btnCloseAccount_Click()"  class="closeaccountbutton">CLOSE ACCOUNT</button>
-        <br />
 
         <div class="footer">
             © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
         </div>
 
         <script>
-            function imgChangePassword_Click() {
-                document.getElementById("imgChangePassword").onclick = function () {
-                    location.href = "ForgottenResetPassword.aspx";
-                }
+            function btnViewUsers_Clicked() {
+                location.href = "AllUsers.aspx";
+            }
+
+            function btnViewStaffMembers_Clicked() {
+                location.href = "AllStaffMembers.aspx";
+            }
+
+            function btnViewFilms_Clicked() {
+                location.href = "AllFilms.aspx"
             }
 
             function btnCloseAccount_Click() {
-                document.getElementById("btnCloseAccount").onclick = function () {
                     location.href = "CloseAccount.aspx"
-                };
             }
+
+            function btnMyAccount_Clicked() {
+                location.href = "CloseAccount.html";
+            }
+
 
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */

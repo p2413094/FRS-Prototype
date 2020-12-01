@@ -54,6 +54,13 @@
             </p>
             <br />
             <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
             <div>
                 <div class="textentry-label">
@@ -67,13 +74,6 @@
                 <br />
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
-
-
-
-
                 <div class="textentry-label">
                     Password
                 </div>
