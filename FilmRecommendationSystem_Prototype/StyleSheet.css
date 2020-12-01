@@ -20,7 +20,7 @@
     font-size: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: lighter;
-    width: 90%;
+    width: 40%;
     float: left;
 }
 
@@ -840,4 +840,14 @@ td {
     float: right;
     margin: 10px;
     margin-top: 17px;
+}
+
+.myaccount-options {
+    line-height: 50px;
+    width: 200px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-size: small;
+    background-color: transparent;
+    color: white;
+    margin-left: 5%;
 }
