@@ -106,7 +106,7 @@
                     <tr id="rowHouse">
                         <td>#1</td>
                         <td>
-                            <input class="textbox-semitransparent" value="Greg" readonly="true" id="txtFirstName" type="text"/>
+                            <input class="textbox-transparent" value="Greg" readonly="true" id="txtFirstName" type="text"/>
                         </td>
                         <td>House</td>
                         <td>Standard</td>

@@ -25,7 +25,15 @@
                 <div class="dropdown-content">
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/WatchLater.png">
+                        <img class="imagedimensions" src="Images/RecommendedFilms.png" />
+                    </div>
+                    <a href="RecommendedFilms.aspx">RECOMMENDATIONS</a>
+                    <br />
+                    <br />
+                    <br />
+
+                    <div class="imagecontainer">
+                        <img class="imagedimensions" src="Images/WatchLater.png" />
                     </div>
                     <a href="WatchList.aspx">WATCHLIST</a>
                     <br />
@@ -33,7 +41,7 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/FavouriteInList.png">
+                        <img class="imagedimensions" src="Images/FavouriteInList.png" />
                     </div>
                     <a href="FavouriteFilms.aspx">FAVOURITES</a>
                     <br />
@@ -41,11 +49,11 @@
                     <br />
 
                     <div class="imagecontainer">
-                        <img class="imagedimensions" src="Images/Log out.png">
+                        <img class="imagedimensions" src="Images/Log out.png" />
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
                 </div>
-                </div> 
+              </div> 
             </div>
 
         <br />
@@ -59,11 +67,9 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input type="text" class="textentry-field">
+                <input type="text" class="textentry-field" />
             </div>
         </section>
-
-
         
         <br />
         <br />

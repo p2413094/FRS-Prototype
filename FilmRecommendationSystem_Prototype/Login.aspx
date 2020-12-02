@@ -72,8 +72,6 @@
                 <br />
                 <br />
                 <br />
-                <br />
-                <br />
                 <div class="textentry-label">
                     Password
                 </div>

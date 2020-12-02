@@ -19,8 +19,8 @@
         <br />
         <div class="navbar">
             <div class="dropdown">
-                <button class="dropbtn">MY ACCOUNT 
-                    <i class="fa fa-caret-down"></i>
+                <button class="dropbtn">
+                    <a href="MyAccount.aspx" class="menutext">MY ACCOUNT</a>
                 </button>
                 <div class="dropdown-content">
 
@@ -45,8 +45,8 @@
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
                 </div>
-            </div> 
-        </div>
+              </div> 
+            </div>
 
         <br />
         <br />

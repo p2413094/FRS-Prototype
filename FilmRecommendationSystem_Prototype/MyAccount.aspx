@@ -89,10 +89,6 @@
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div class="account">
             <p class="page-header">
                 My account
@@ -158,15 +154,11 @@
 
         <script>
             function imgChangePassword_Click() {
-                document.getElementById("imgChangePassword").onclick = function () {
                     location.href = "ForgottenResetPassword.aspx";
-                }
             }
 
             function btnCloseAccount_Click() {
-                document.getElementById("btnCloseAccount").onclick = function () {
                     location.href = "CloseAccount.aspx"
-                };
             }
 
             /* When the user clicks on the button,
