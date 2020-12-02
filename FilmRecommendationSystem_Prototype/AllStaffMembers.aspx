@@ -116,11 +116,21 @@
                         <td>
                             <input class="textbox-transparent" value="Greg" readonly="true" id="txtFirstName" type="text"/>
                         </td>
-                        <td>House</td>
-                        <td>Standard</td>
-                        <td>Y</td>
-                        
-                        <td><label id="lblSuspended">N</label></td>
+                        <td>
+                            <input class="textbox-transparent" value="House" readonly="true" id="txtLastName" type="text"/>
+                        </td>
+                        <td>
+                            <select disabled="disabled" id="slctPrivilege">
+                                <option>Standard</option>
+                                <option>Administrator</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="textbox-transparent" value="Y" readonly="true" id="txtConfirmed" type="text"/>
+                        </td>
+                        <td>
+                            <input class="textbox-transparent" value="N" readonly="true" id="txtSuspended" type="text"/>
+                        </td>
                         <td class="tablecell-actions" id="cellTableActions">
                             <img src="Images/Edit%20icon.png" class="action_icon" onclick="btnEdit_Clicked()" id="icnEdit" />
                             <img src="Images/NoIcon.png" id="iconSuspendUser" class="action_icon" onclick="btnSuspend_Clicked()"/>
@@ -132,11 +142,15 @@
                         <td>#13</td>
                         <td>Remy</td>
                         <td>Hadley</td>
-                        <td>Administrator</td>
+                        <td>
+                            <select disabled="disabled">
+                                <option>Standard</option>
+                                <option>Administrator</option>
+                            </select>
+                        </td>
                         <td>Y</td>
                         <td>Y</td>
                         <td></td>
-                        
                     </tr>
 
                     <tr id="rowAdd">
@@ -148,7 +162,10 @@
                             <input type="text" class="textbox-semitransparent" id="txtAddLastName"/>
                         </td>
                         <td>
-                            <input type="text" class="textbox-semitransparent" id="txtAddPrivilegeLevel"/>
+                            <select id="slctAddPrivilegeLevel">
+                                <option>Standard</option>
+                                <option>Administrator</option>
+                            </select>
                         </td>
                         <td>N</td>
                         <td>N</td>
@@ -176,6 +193,7 @@
                 Site NOT for rollout
             </div>
         </div>
+
         <script>
             var count = 0,
                 suspended = false;
@@ -198,8 +216,7 @@
                     document.getElementById("txtAddLastName").className = "textbox-transparent";   
                     document.getElementById("txtAddLastName").readOnly = true;
 
-                    document.getElementById("txtAddPrivilegeLevel").className = "textbox-transparent";   
-                    document.getElementById("txtAddPrivilegeLevel").readOnly = true;
+                    document.getElementById("slctAddPrivilegeLevel").disabled = true;
                 }
                 else {
                     alert("Staff member was not added");
@@ -209,6 +226,11 @@
             function btnEdit_Clicked() {
                 //location.href = "EditUser.aspx";
                 document.getElementById("txtFirstName").readOnly = false;
+                document.getElementById("txtLastName").readOnly = false;
+                document.getElementById("txtConfirmed").readOnly = false;
+                document.getElementById("txtSuspended").readOnly = false;
+                document.getElementById("slctPrivilege").disabled = false;
+
                 document.getElementById("icnEdit").src = "Images/Green%20tick_save.png";
 
                 if (count != 0) {
@@ -217,34 +239,44 @@
                     alert("Record updated");
                     document.getElementById("icnEdit").src = "Images/Edit%20icon.png";
                     document.getElementById("txtFirstName").readOnly = true;
-
+                    document.getElementById("txtLastName").readOnly = true;
+                    document.getElementById("txtConfirmed").readOnly = true;
+                    document.getElementById("txtSuspended").readOnly = true;
                 }
                 else {
                     alert("Record was not updated");
                     document.getElementById("txtFirstName").value = "Greg";
+                    document.getElementById("txtLastName").value = "House";
+                    document.getElementById("txtConfirmed").value = "Y";
+                    document.getElementById("txtSuspended").value = "N";
+                    document.getElementById("slctPrivilege").value = "Standard";
+
+                    document.getElementById("txtFirstName").readOnly = true;
+                    document.getElementById("txtLastName").readOnly = true;
+                    document.getElementById("txtConfirmed").readOnly = true;
+                    document.getElementById("txtSuspended").readOnly = true;
+                    document.getElementById("slctPrivilege").disabled = true;
                 }
                 }
                 count++;
-
             }           
 
             function btnSuspend_Clicked() {
                 if (suspended == true) {
                     var confirmMessage = confirm("Un-suspend staff member?");
                     if (confirmMessage == true) {
-                        document.getElementById("lblSuspended").innerText = "N";
+                        document.getElementById("txtSuspended").value = "N";
                         alert("Staff member un-suspended");
-                        suspended = true;
+                        suspended = false;
                     }
                     else {
                         alert("Staff member is still suspended");
                     }
                 }
-
                 else {
                     var confirmMessage = confirm("Suspend staff member?");
                     if (confirmMessage == true) {
-                        document.getElementById("lblSuspended").innerText = "Y";
+                        document.getElementById("txtSuspended").value = "Y";
                         alert("Staff member suspended");
                         suspended = true;
                     }
