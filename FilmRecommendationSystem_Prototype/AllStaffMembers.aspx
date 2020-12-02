@@ -19,10 +19,18 @@
         <br />
         <div class="navbar">
             <div class="dropdown">
-                <button class="dropbtn">MY ACCOUNT 
-                    <i class="fa fa-caret-down"></i>
+                <button class="dropbtn">
+                    <a href="MyAccount.aspx" class="menutext">MY ACCOUNT</a>
                 </button>
                 <div class="dropdown-content">
+
+                    <div class="imagecontainer">
+                        <img class="imagedimensions" src="Images/RecommendedFilms.png" />
+                    </div>
+                    <a href="RecommendedFilms.aspx">RECOMMENDATIONS</a>
+                    <br />
+                    <br />
+                    <br />
 
                     <div class="imagecontainer">
                         <img class="imagedimensions" src="Images/WatchLater.png" />
@@ -36,7 +44,7 @@
                         <img class="imagedimensions" src="Images/FavouriteInList.png" />
                     </div>
                     <a href="FavouriteFilms.aspx">FAVOURITES</a>
-                    <br /> 
+                    <br />
                     <br />
                     <br />
 
@@ -45,8 +53,8 @@
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
                 </div>
-            </div> 
-        </div>
+              </div> 
+            </div>
 
         <br />
         <br />
@@ -185,8 +193,13 @@
                 if (confirmMessage == true) {
                     alert("Staff member added!");
                     document.getElementById("txtAddFirstName").className = "textbox-transparent";
+                    document.getElementById("txtAddFirstName").readOnly = true;
+
                     document.getElementById("txtAddLastName").className = "textbox-transparent";   
+                    document.getElementById("txtAddLastName").readOnly = true;
+
                     document.getElementById("txtAddPrivilegeLevel").className = "textbox-transparent";   
+                    document.getElementById("txtAddPrivilegeLevel").readOnly = true;
                 }
                 else {
                     alert("Staff member was not added");

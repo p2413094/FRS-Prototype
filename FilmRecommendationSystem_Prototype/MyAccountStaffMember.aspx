@@ -21,8 +21,8 @@
         <br />
         <div class="navbar">
             <div class="dropdown">
-                <button id="btnMyAccount" onclick="btnMyAccount_Clicked()" class="dropbtn">MY ACCOUNT 
-                    <i class="fa fa-caret-down"></i>
+                <button class="dropbtn">
+                    <a href="MyAccount.aspx" class="menutext">MY ACCOUNT</a>
                 </button>
                 <div class="dropdown-content">
 
@@ -54,12 +54,9 @@
                         <img class="imagedimensions" src="Images/Log out.png" />
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
-                    <br />
-                    <br />
-                    <br />
                 </div>
-            </div> 
-        </div>
+              </div> 
+            </div>
 
         <br />
         <br />

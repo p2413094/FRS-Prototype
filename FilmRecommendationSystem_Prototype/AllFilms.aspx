@@ -227,7 +227,7 @@
                     document.getElementById("txtIMDB").className = "textbox-transparent";
                     document.getElementById("txtIMDB").readOnly = true;
 
-                    document.tElementById("txtTmIMDB").className = "textbox-transparent";
+                    document.getElementById("txtTmIMDB").className = "textbox-transparent";
                     document.getElementById("txtTmIMDB").readOnly = true;
 
                     count = 0;

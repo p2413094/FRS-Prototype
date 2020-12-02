@@ -19,10 +19,18 @@
         <br />
         <div class="navbar">
             <div class="dropdown">
-                <button class="dropbtn">MY ACCOUNT 
-                    <i class="fa fa-caret-down"></i>
+                <button class="dropbtn">
+                    <a href="MyAccount.aspx" class="menutext">MY ACCOUNT</a>
                 </button>
                 <div class="dropdown-content">
+
+                    <div class="imagecontainer">
+                        <img class="imagedimensions" src="Images/RecommendedFilms.png" />
+                    </div>
+                    <a href="RecommendedFilms.aspx">RECOMMENDATIONS</a>
+                    <br />
+                    <br />
+                    <br />
 
                     <div class="imagecontainer">
                         <img class="imagedimensions" src="Images/WatchLater.png" />
@@ -36,7 +44,7 @@
                         <img class="imagedimensions" src="Images/FavouriteInList.png" />
                     </div>
                     <a href="FavouriteFilms.aspx">FAVOURITES</a>
-                    <br /> 
+                    <br />
                     <br />
                     <br />
 
@@ -45,8 +53,8 @@
                     </div>
                     <a href="Homepage.aspx">LOG OUT</a>
                 </div>
-            </div> 
-        </div>
+              </div> 
+            </div>
 
         <br />
         <br />
@@ -104,7 +112,6 @@
                             <label id="lblSuspended">N</label>
                         </td>
                         <td class="tablecell-actions" id="cellTableActions">
-                            <img src="Images/Edit%20icon.png" class="action_icon" onclick="btnEdit_Clicked()" />
                             <img src="Images/NoIcon.png" id="iconSuspendUser" class="action_icon" onclick="SuspendUserAccount()" />
                         </td>
                     </tr>
@@ -140,11 +147,7 @@
         </div>
 
         <script>
-            function btnEdit_Clicked() {
-                location.href = "EditUser.aspx";
-            }
-           
-            function SuspendUserAccount() {
+         function SuspendUserAccount() {
                 var confirmMessage = confirm("Suspend user account?");
                 if (confirmMessage == true) {
                     alert("User suspended");
