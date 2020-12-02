@@ -30,7 +30,15 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input type="text" class="textentry-field" />
+                <input autocomplete="off" class="textentry-field" type="text" id="myInput" onkeyup="filterSearchFunction()" />
+                <div>
+                    <div id="mySearchDropdown" class="searchdropdown-content">
+                        <a href="FilmInformation2.aspx">Terminator 2: Judgment Day (1991)</a>
+                        <a>Little Women (2019)</a>
+                    </div>
+                </div>
+                <br />
+                <br />
             </div>
         </section>
         <br />
@@ -143,6 +151,24 @@
                     var newTag = document.getElementById("txtTag").value;
                     var tags = document.getElementById("divTags");
                     tags.innerHTML += newTag;
+            }
+
+            //Search bar at top of screen
+            function filterSearchFunction() {
+                document.getElementById("mySearchDropdown").classList.toggle("show");
+                var input, filter, ul, li, a, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                div = document.getElementById("mySearchDropdown");
+                a = div.getElementsByTagName("a");
+                for (i = 0; i < a.length; i++) {
+                    txtValue = a[i].textContent || a[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                    } else {
+                    a[i].style.display = "none";
+                    }
+                }
             }
         </script>
 

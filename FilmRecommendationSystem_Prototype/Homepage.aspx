@@ -113,7 +113,9 @@
         </div>
 
         <section class="watchlist">
-            <img src="Images/Terminator.jpg" class="image" />
+            <a href="FilmInformation.aspx">
+                <img src="Images/Terminator.jpg" class="image" />
+            </a>
             <img src="Images/King Kong.jpg" class="image" />
             <img src="Images/TCM.jpg" class="image" />
             <img src="Images/Dunkirk.jpg" class="image" />

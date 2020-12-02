@@ -31,7 +31,7 @@
             <div class="textentry-container">
                 <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
-                    <div id="myDropdown" class="dropdown-content">
+                    <div id="myDropdown" class="searchdropdown-content">
                         <a href="FilmInformation.aspx">The Terminator (1984)</a>
                         <a>Little Women (2019)</a>
                     </div>

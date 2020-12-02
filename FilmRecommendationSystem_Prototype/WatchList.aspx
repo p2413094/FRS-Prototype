@@ -70,7 +70,7 @@
                 <input autocomplete="off" class="textentry-field" type="text" oninput="myFunction()" id="myInput" onkeyup="filterFunction()" />
                 <div>
                     <div id="myDropdown" class="searchdropdown-content">
-                        <a href="FilmInformation2.aspx">The Terminator (1984)</a>
+                        <a href="FilmInformation.aspx">The Terminator (1984)</a>
                         <a>Little Women (2019)</a>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
         
         
         <section class="watchlist">
-            <a href="FilmInformation.html">
+            <a href="FilmInformation2.aspx">
                 <img src="Images/Terminator 2.jpg" class="image" />
             </a>
             <img src="Images/Endgame.jpg" class="image" />

@@ -7,8 +7,6 @@
     <title>Film recommender</title>
     <link rel="stylesheet" href="StyleSheet.css" />
 </head>
-
-
 <body class="body">
     <form runat="server">
         <p class="logo textlink">
@@ -30,7 +28,15 @@
                 SEARCH
             </div>
             <div class="textentry-container">
-                <input type="text" class="textentry-field" />
+                <input autocomplete="off" class="textentry-field" type="text" id="myInput" onkeyup="filterSearchFunction()" />
+                <div>
+                    <div id="mySearchDropdown" class="searchdropdown-content">
+                        <a href="FilmInformation2.aspx">Terminator 2: Judgment Day (1991)</a>
+                        <a>Little Women (2019)</a>
+                    </div>
+                </div>
+                <br />
+                <br />
             </div>
         </section>
         <br />
@@ -51,7 +57,7 @@
 
             <div class="container">
                 <div>
-                    <img src="Images/Terminator 2.jpg" alt="Avatar" class="image" />   
+                    <img src="Images/Terminator 2.jpg" alt="Avatar" class="image" />
                     <div class="overlay-left">
                         <img id="imgWatchLater" onclick="imgWatchLaterClick()" class="watchlaterfavouriteicon" src="Images/WatchLater.png" />
                     </div>
@@ -77,7 +83,7 @@
                     <div class="tag-container">
                         <div class="tag-heading">My tags: </div>
                         <div id="divTags" class="tags">
-                            emotional, greatest, incredible
+                            action, 
                             
                         </div>
                         <br />
@@ -91,12 +97,13 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="filminformation">
                 <div class="information-header">Description</div>
                 <br />
-                A cyborg, identical to the one who failed to kill Sarah Connor, 
-                must now protect her teenage son, John Connor, from a more advanced and powerful cyborg.    
+                A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her teenage son, John Connor, 
+                from a more advanced and powerful cyborg.
+
                 <br />
 
                 <p class="information-header">Genre</p>
@@ -117,41 +124,49 @@
                 <p class="information-header">Runtime</p>
                 137 mins
                 <br />   
-             </div>
-            
-
+            </div>
         </section>
 
         <script type="text/javascript">
             function imgWatchLaterClick() {
-                document.getElementById("imgWatchLater").onclick = function () {
                     document.getElementById("imgWatchLater").src = "Images/WatchLaterAdded.png";
-                }
             }
 
             function imgFavouriteClick() {
-                document.getElementById("imgFavourite").onclick = function () {
                     document.getElementById("imgFavourite").src = "Images/FavouriteInList.png";
-                }
             }
 
             function imgRatingClick() {
-                document.getElementById("imgRating").onclick = function () {
                     document.getElementById("star1").src = "Images/FavouriteInList.png";
                     document.getElementById("star2").src = "Images/FavouriteInList.png";
                     document.getElementById("star3").src = "Images/FavouriteInList.png";
                     document.getElementById("star4").src = "Images/FavouriteInList.png";
                     document.getElementById("star5").src = "Images/FavouriteInList.png";
-                }
             }
 
             function btnAddTagClick() {
-                document.getElementById("btnAddTag").onclick = function () {
                     var newTag = document.getElementById("txtTag").value;
                     var tags = document.getElementById("divTags");
                     tags.innerHTML += newTag;
+            }
+
+            //Search bar at top of screen
+            function filterSearchFunction() {
+                document.getElementById("mySearchDropdown").classList.toggle("show");
+                var input, filter, ul, li, a, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                div = document.getElementById("mySearchDropdown");
+                a = div.getElementsByTagName("a");
+                for (i = 0; i < a.length; i++) {
+                    txtValue = a[i].textContent || a[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                    } else {
+                    a[i].style.display = "none";
+                    }
                 }
-            };
+            }
         </script>
 
         <div class="footer">
