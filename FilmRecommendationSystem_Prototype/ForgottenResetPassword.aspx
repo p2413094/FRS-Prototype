@@ -110,9 +110,7 @@
     </form>
     <script type="text/javascript">
         function btnResetPassword_Click() {
-            alert("If an account exists, you'll receive an email with a link to reset your password.");
-            location.href = "Login.aspx";
-
+            location.href = "ResetPassword.aspx";
         }
 
         /* When the user clicks on the button,

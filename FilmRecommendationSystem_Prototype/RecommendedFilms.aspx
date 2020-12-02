@@ -12,14 +12,52 @@
     <form runat="server">
         <p class="logo textlink">
             <a href="Homepage.aspx">FILM RECOMMENDER</a>
-            <ul>
-                <br />
-                <br />
-                <br />
-                <li><a href="Register.aspx">REGISTER</a></li>
-                <li><a href="Login.aspx">SIGN IN</a></li>
-            </ul>
         </p>
+
+        <br />
+        <br />
+        <br />
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">MY ACCOUNT 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+
+                    <div class="imagecontainer">
+                        <img class="imagedimensions" src="Images/RecommendedFilms.png" />
+                    </div>
+                    <a href="RecommendedFilms.aspx">RECOMMENDATIONS</a>
+                    <br />
+                    <br />
+                    <br />
+
+                    <div class="imagecontainer">
+                        <img class="imagedimensions" src="Images/WatchLater.png" />
+                    </div>
+                    <a href="WatchList.aspx">WATCHLIST</a>
+                    <br />
+                    <br />
+                    <br />
+
+                    <div class="imagecontainer">
+                        <img class="imagedimensions" src="Images/FavouriteInList.png" />
+                    </div>
+                    <a href="FavouriteFilms.aspx">FAVOURITES</a>
+                    <br />
+                    <br />
+                    <br />
+
+                    <div class="imagecontainer">
+                        <img class="imagedimensions" src="Images/Log out.png" />
+                    </div>
+                    <a href="Homepage.aspx">LOG OUT</a>
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div> 
+        </div>
 
         <br />
         <br />
