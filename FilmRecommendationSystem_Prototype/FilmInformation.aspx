@@ -130,6 +130,19 @@
             </div>
         </section>
 
+        <div class="footer">
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
+        </div>
+
         <script type="text/javascript">
             function imgWatchLaterClick() {
                     document.getElementById("imgWatchLater").src = "Images/WatchLaterAdded.png";
@@ -171,20 +184,6 @@
                 }
             }
         </script>
-
-        <div class="footer">
-            <div class="links">
-                <a target="blank" href="HelpPage.aspx">Help</a>
-            </div>
-            <div class="footercopyright">
-                © 2020 FILM RECOMMENDER
-                <br />
-                All rights are reserved
-                <br />
-                Site NOT for rollout
-            </div>
-        </div>
-
 </form>
 </body>
 </html>

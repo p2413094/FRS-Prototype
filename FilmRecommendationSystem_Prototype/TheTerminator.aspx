@@ -104,11 +104,22 @@
         <br />
         <br />
 
+        <div class="footer">
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
+        </div>
+
         <script>
             function imgFavouriteClick() {
-                document.getElementById("imgFavourite").onclick = function () {
-                    document.getElementById("imgFavourite").src = "Images/FavouriteInList.png";
-            };
+                document.getElementById("imgFavourite").src = "Images/FavouriteInList.png";
             }
 
             /* When the user clicks on the button,

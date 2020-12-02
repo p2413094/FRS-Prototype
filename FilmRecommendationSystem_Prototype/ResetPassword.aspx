@@ -94,48 +94,52 @@
                 </div>
             </div>
             <br />
-            
+        </div>
 
+        <div class="footer">
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
         </div>
 
         <script type="text/javascript">
             function btnLogin_Click() {
-                document.getElementById("btnLogin").onclick = function () {
-                    location.href = "ResetPasswordConfirmation.aspx";
-            };
+                location.href = "ResetPasswordConfirmation.aspx";
             }
 
             function SavePassword() {
                 alert("Your new password has been saved");
-                location.href="Login.aspx";
-                
+                location.href="Login.aspx";        
             }
 
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */
             function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+                document.getElementById("myDropdown").classList.toggle("show");
             }
 
             function filterFunction() {
-            var input, filter, ul, li, a, i;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            div = document.getElementById("myDropdown");
-            a = div.getElementsByTagName("a");
-            for (i = 0; i < a.length; i++) {
-                txtValue = a[i].textContent || a[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                a[i].style.display = "";
-                } else {
-                a[i].style.display = "none";
+                var input, filter, ul, li, a, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                div = document.getElementById("myDropdown");
+                a = div.getElementsByTagName("a");
+                for (i = 0; i < a.length; i++) {
+                    txtValue = a[i].textContent || a[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                    } else {
+                    a[i].style.display = "none";}
                 }
-            }
-        }
+                }
         </script>
-        <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
-        </div>
     </form>
 </body>
 </html>

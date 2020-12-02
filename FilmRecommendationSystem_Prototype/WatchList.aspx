@@ -97,14 +97,12 @@
         <br />
         <br />
 
-
         <div id="filmToBeRemoved" class="newwatchlist">
             <img src="Images/The World's End.jpg" class="image" />
             <div class="overlay">
                 <img id="imgRemove" onclick="imgRemoveClick()" class="watchlatericon" src="Images/Remove.png" />
             </div>
         </div>
-        
         
         <section class="watchlist">
             <a href="FilmInformation2.aspx">
@@ -117,6 +115,19 @@
             <img src="Images/King Kong.jpg" class="image" />
             <img src="Images/Casablanca.jpg" class="image" />
         </section>
+
+        <div class="footer">
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
+        </div>
 
         <script>
             /* When the user clicks on the button,
@@ -145,10 +156,6 @@
                 document.getElementById("filmToBeRemoved").style.display = "none";
             }
         </script>
-
-        <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
-        </div>
     </form>
 </body>
 </html>

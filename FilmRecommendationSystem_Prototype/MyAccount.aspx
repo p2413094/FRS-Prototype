@@ -149,7 +149,16 @@
         <br />
 
         <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
         </div>
 
         <script>
@@ -185,5 +194,4 @@
         </script>
     </form>
 </body>
-
 </html>

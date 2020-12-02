@@ -165,7 +165,16 @@
         <button type="button" id="btnCloseAccount" onclick="btnCloseAccount_Click()"  class="closeaccountbutton">CLOSE ACCOUNT</button>
 
         <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
         </div>
 
         <script>
@@ -184,7 +193,6 @@
             function btnMyAccount_Clicked() {
                 location.href = "CloseAccount.html";
             }
-
 
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */
@@ -210,5 +218,4 @@
         </script>
     </form>
 </body>
-
 </html>

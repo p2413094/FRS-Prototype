@@ -91,9 +91,19 @@
                 </div>
             </div>
             <br />
+        </div>
 
-
-
+        <div class="footer">
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
         </div>
 
         <script type="text/javascript">     
@@ -132,19 +142,5 @@
             }
         }
         </script>
-    <br />
-    <br />
-        <div class="footer">
-            <div class="links">
-                <a target="blank" href="HelpPage.aspx">Help</a>
-            </div>
-            <div class="footercopyright">
-                © 2020 FILM RECOMMENDER
-                <br />
-                All rights are reserved
-                <br />
-                Site NOT for rollout
-            </div>
-        </div>
 </body>
-    </html>
+</html>

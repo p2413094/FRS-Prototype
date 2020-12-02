@@ -127,6 +127,19 @@
             <button type="button" onclick="KeepMyAccount()" class="keepmyaccountbutton">KEEP MY ACCOUNT</button>
         </div>
 
+        <div class="footer">
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
+        </div>
+
         <script>
             function btnLogin_Click() {
                 document.getElementById("btnLogin").onclick = function () {
@@ -174,18 +187,6 @@
             }
             }
         </script>
-        <div class="footer">
-            <div class="links">
-                <a target="blank" href="HelpPage.aspx">Help</a>
-            </div>
-            <div class="footercopyright">
-                © 2020 FILM RECOMMENDER
-                <br />
-                All rights are reserved
-                <br />
-                Site NOT for rollout
-            </div>
-        </div>
     </form>
 </body>
-    </html>
+</html>

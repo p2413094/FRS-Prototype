@@ -126,6 +126,19 @@
             <br />
         </div>
 
+        <div class="footer">
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
+        </div>
+
         <script>
             function btnEdit_Clicked() {
                 location.href = "EditUser.aspx";
@@ -174,10 +187,7 @@
                 }
             }
             }
-        </script>
-        <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
-        </div>
+        </script>        
     </form>
 </body>
 </html>

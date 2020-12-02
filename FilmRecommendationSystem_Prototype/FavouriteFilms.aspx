@@ -106,9 +106,7 @@
             <img src="Images/District 9.jpg" class="image" />
             <img src="Images/Tron Legacy.jpg" class="image" />
             <img src="Images/Ghostbusters.jpg" class="image" />
-        </section>
-
-        
+        </section>     
 
         <script>
             /* When the user clicks on the button,
@@ -139,7 +137,7 @@
          
         <div class="footer">
             <div class="links">
-                <a target="blank" href="HelpPage.aspx">Help</a>
+                Help
             </div>
             <div class="footercopyright">
                 © 2020 FILM RECOMMENDER

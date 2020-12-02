@@ -93,9 +93,10 @@
         <br />
         <br />
         <br />
+        
         <div class="footer">
             <div class="links">
-                <a target="blank" href="HelpPage.aspx">Help</a>
+                Help
             </div>
             <div class="footercopyright">
                 © 2020 FILM RECOMMENDER
@@ -108,8 +109,6 @@
         
     </form>
     <script type="text/javascript">
-
-
         function btnResetPassword_Click() {
             alert("If an account exists, you'll receive an email with a link to reset your password.");
             location.href = "Login.aspx";
@@ -137,6 +136,5 @@
                 }
             }}
     </script>
-    </script>
 </body>
-    </html>
+</html>

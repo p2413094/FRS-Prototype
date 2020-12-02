@@ -143,9 +143,10 @@
         <br />
         <br />
         <br />
+
         <div class="footer">
             <div class="links">
-                <a target="blank" href="HelpPage.aspx">Help</a>
+                Help
             </div>
             <div class="footercopyright">
                 © 2020 FILM RECOMMENDER
@@ -185,4 +186,4 @@
         }
     </script>
 </body>
-    </html>
+</html>

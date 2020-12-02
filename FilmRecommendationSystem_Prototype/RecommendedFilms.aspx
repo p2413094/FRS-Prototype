@@ -68,8 +68,20 @@
             <img src="Images/The Shawshank Redemption.jpg" class="image" />
             <img src="Images/Parasite.jpg" class="image" />
             <img src="Images/The Bridge on the River Kwai.jpg" class="image" />
-
         </section>
+
+        <div class="footer">
+            <div class="links">
+                Help
+            </div>
+            <div class="footercopyright">
+                © 2020 FILM RECOMMENDER
+                <br />
+                All rights are reserved
+                <br />
+                Site NOT for rollout
+            </div>
+        </div>
 
         <script>
             /* When the user clicks on the button,
@@ -94,10 +106,6 @@
             }
         }
         </script>
-
-        <div class="footer">
-            © 2020 FILM RECOMMENDER. All rights are reserved. Site NOT for rollout unless for demonstration purposes.
-        </div>
     </form>
 </body>
-    </html>
+</html>
