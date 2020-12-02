@@ -62,6 +62,7 @@
             <br />
             <br />
             <br />
+            <br />
             <div class="text">
                 <p class="page-subheader">
                     What do you get when you register with us?
@@ -119,10 +120,11 @@
                 Confirm password
             </div>
             <div class="textentry-field">
-                <input type="password" class="textentry-fieldsize"> 
+                <input type="password" class="textentry-fieldsize" />
                 <br />
                 <br />
                 <p style="font-style: italic;">By creating an account, you acknowledge our privacy statement.</p>
+                <button type="button" onclick="btnRegister_Click()" id="btnRegister" class="registerbutton">CREATE ACCOUNT</button>
 
             </div>
             <br />
@@ -134,9 +136,6 @@
             <br />
             <br />
 
-            <div class="filmrecommendation-getrecommendationsbutton">
-                <button type="button" onclick="btnRegister_Click()" id="btnRegister" class="registerbutton">CREATE ACCOUNT</button>
-            </div>
             <br />
         </div>
         <br />

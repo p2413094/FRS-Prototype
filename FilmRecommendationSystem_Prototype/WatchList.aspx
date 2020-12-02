@@ -25,6 +25,14 @@
                 <div class="dropdown-content">
 
                     <div class="imagecontainer">
+                        <img class="imagedimensions" src="Images/RecommendedFilms.png" />
+                    </div>
+                    <a href="RecommendedFilms.aspx">RECOMMENDATIONS</a>
+                    <br />
+                    <br />
+                    <br />
+
+                    <div class="imagecontainer">
                         <img class="imagedimensions" src="Images/WatchLater.png" />
                     </div>
                     <a href="WatchList.aspx">WATCHLIST</a>

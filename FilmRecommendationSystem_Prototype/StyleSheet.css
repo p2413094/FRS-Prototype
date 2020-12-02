@@ -20,7 +20,7 @@
     font-size: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: lighter;
-    width: 40%;
+    width: 90%;
     float: left;
 }
 
@@ -100,7 +100,7 @@ a {
 }
 
 .account {
-    width: 50%;
+    width: 60%;
     margin-left: 4%;
 }
 
@@ -625,7 +625,7 @@ td {
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-    display: block; /*block;*/ /*none*/
+    display: none; /*block;*/ /*none*/
     position: absolute;
     background-color: transparent;
     z-index: 1;
@@ -786,8 +786,8 @@ td {
 .filmrecommendation-getrecommendationsbutton {
     display: flex;
     justify-content: center;
-    width: 25%;
-    margin-left: 21%;
+    width: 45%;
+    margin-left: 14%;
 }
 
 .filmrecommendation-getrecommendationsbutton-buttonitself {

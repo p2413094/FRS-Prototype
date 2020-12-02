@@ -94,6 +94,7 @@
 
         <br />
         <br />
+        <br />
         <section id="secYourRecommendations" class="watchlist">
             <div class="homepage-subHeader">
                 Your recommendations
