@@ -72,8 +72,9 @@
                 <div class="tag-container">
                     <div class="tag-heading">My tags: </div>
                     <br />
-                    <div id="divTags" class="tags">
-                        action, 
+                    <div id="divTags" class="tags" >
+                        <label id="lblTag" onclick="lblTag_Clicked()">action1</label>
+                        sci-fi, 
                     </div>
                     <br />
                     <button onclick="btnAddTagClick()" id="btnAddTag" class="button-addtag" type="button">ADD TAG</button>
@@ -88,6 +89,7 @@
                 <div class="tag-container">
                     <div class="tag-heading">Assigned mood: </div>
                     <div id="divMoods" class="tags">
+                        <label id="lblMood" onclick="lblMood_Clicked()">heart-warming</label>
                         oscar-worthy, 
                     </div>
                     <br />
@@ -170,6 +172,33 @@
                     mood = document.getElementById("divMoods");
                 mood.innerHTML += newMood;
             }
+
+
+
+
+            function lblTag_Clicked() {
+                var confirmMessage = confirm("Delete tag?");
+                if (confirmMessage == true) {
+                    alert("Tag deleted");
+                    document.getElementById("lblTag").style.display = "none";
+                }
+                else {
+                    alert("Tag not deleted")
+                }
+            }
+
+            function lblMood_Clicked() {
+                var confirmMessage = confirm("Delete mood?");
+                if (confirmMessage == true) {
+                    alert("Mood deleted");
+                    document.getElementById("lblMood").style.display = "none";
+                }
+                else {
+                    alert("Mood not deleted")
+                }
+            }
+            
+
 
             //Search bar at top of screen
             function filterSearchFunction() {
