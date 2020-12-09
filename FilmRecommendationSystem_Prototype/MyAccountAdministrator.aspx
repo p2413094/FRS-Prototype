@@ -109,10 +109,13 @@
         <button type="button" onclick="btnViewUsers_Clicked()" class="myaccount-options">VIEW ALL USERS</button>
         <br />
         <br />
+        <button type="button" onclick="btnViewFilms_Clicked()" class="myaccount-options">VIEW ALL FILMS</button>
+        <br />
+        <br />
         <button type="button" onclick="btnViewStaffMembers_Clicked()" class="myaccount-options">VIEW ALL STAFF MEMBERS</button>
         <br />
         <br />
-        <button type="button" onclick="btnViewFilms_Clicked()" class="myaccount-options">VIEW ALL FILMS</button>
+        <button type="button" onclick="btnViewPreviousStaffMembers_Clicked()" class="myaccount-options">VIEW PREVIOUS STAFF MEMBERS</button>
 
 
         <br />
@@ -194,13 +197,16 @@
             }
 
             function btnCloseAccount_Click() {
-                    location.href = "CloseAccount.aspx"
+                location.href = "CloseAccount.aspx"
             }
 
             function btnMyAccount_Clicked() {
                 location.href = "CloseAccount.html";
             }
 
+            function btnViewPreviousStaffMembers_Clicked() {
+                location.href = "PreviousStaffMembers.aspx";
+            }
 
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */
