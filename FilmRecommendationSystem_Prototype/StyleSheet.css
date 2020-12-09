@@ -235,6 +235,9 @@ a {
     backface-visibility: hidden;
 }
 
+.container-image {
+    height: 500px;
+}
 
 .container:hover .image {
     opacity: 0.2;
@@ -248,32 +251,8 @@ a {
     opacity: 1;
 }
 
-.film .container .rating-container {
-    height: 50px;
-    width: 325px;
-    position: absolute;
-    bottom: 100px;
-}
-
-    .film .container .rating-container .rating-heading {
-        font-size: 18px;
-        font-weight: bold;
-        float: left;
-    }
-
-    .film .container .rating-container .ratingimage-container {
-        float: right;
-    }
-
-    .film .container .rating-container .ratingimage-imagesize {
-        width: 40px;
-        height: 40px;
-    }
-
 .film .container .tag-container {
     width: 325px;
-    position: absolute;
-    bottom: 0;
 }
 
     .film .container .tag-container .tag-heading {
@@ -287,7 +266,7 @@ a {
         text-align: right;
         overflow: hidden;
         width: 70%;
-        height: 40px;
+        height: 30px;
     }
 
     .film .container .tag-container .tagentrycontainer {
@@ -325,7 +304,7 @@ a {
 .container {
     position: relative;
     width: 330px;
-    height: 650px; /*565px;*/ /*500px;*/
+    height: 700px;/*650px;*/ /*565px;*/ /*500px;*/
     float: left;
     margin-right: 5%;
 }

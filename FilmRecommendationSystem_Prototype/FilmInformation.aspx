@@ -55,48 +55,47 @@
             <div class="header">The Terminator (1984)</div>
             <br />
             <br />
-            </div>
             <br />
 
             <div class="container">
-                <div>
-                    <img src="Images/Terminator.jpg" alt="Avatar" class="image">   
+                <div class="container-image">
+                    <img src="Images/Terminator.jpg" alt="Avatar" class="image" />
                     <div class="overlay-left">
-                        <img id="imgWatchLater" onclick="imgWatchLaterClick()" class="watchlaterfavouriteicon" src="Images/WatchLater.png">
+                        <img id="imgWatchLater" onclick="imgWatchLaterClick()" class="watchlaterfavouriteicon" src="Images/WatchLater.png" />
                     </div>
                     <div class="overlay-right">
-                        <img id="imgFavourite" onclick="imgFavouriteClick()" class="watchlaterfavouriteicon" src="Images/Favourite.png">
+                        <img id="imgFavourite" onclick="imgFavouriteClick()" class="watchlaterfavouriteicon" src="Images/Favourite.png" />
                     </div>    
                 </div>
-                
-                <div>
-                    <div class="rating-container">
-                        <div class="rating-heading">My rating:</div>
-                        <div id="imgRating" class="ratingimage-container" onclick="imgRatingClick()">
-                            <img id="star1" src="Images/Favourite.png" class="ratingimage-imagesize" />
-                            <img id="star2" src="Images/Favourite.png" class="ratingimage-imagesize" />
-                            <img id="star3" src="Images/Favourite.png" class="ratingimage-imagesize" />
-                            <img id="star4" src="Images/Favourite.png" class="ratingimage-imagesize" />
-                            <img id="star5" src="Images/Favourite.png" class="ratingimage-imagesize" />
-                        </div>    
+                <br />
+
+                <div class="tag-container">
+                    <div class="tag-heading">My tags: </div>
+                    <br />
+                    <div id="divTags" class="tags">
+                        action, 
+                    </div>
+                    <br />
+                    <button onclick="btnAddTagClick()" id="btnAddTag" class="button-addtag" type="button">ADD TAG</button>
+                    <div class="tagentrycontainer">
+                        <input id="txtTag" class="tagentryfield" type="text" placeholder="Enter new tag here..." />
                     </div>
                 </div>
+                <br />
+                <br />
+                <br />
 
-                <div>
-                    <div class="tag-container">
-                        <div class="tag-heading">My tags: </div>
-                        <div id="divTags" class="tags">
-                            action, 
-                            
-                        </div>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <button onclick="btnAddTagClick()" id="btnAddTag" class="button-addtag" type="button">ADD TAG</button>
-                        <div class="tagentrycontainer">
-                            <input id="txtTag" class="tagentryfield" type="text" placeholder="Enter new tag here..." />
-                        </div>
+                <div class="tag-container">
+                    <div class="tag-heading">Assigned mood: </div>
+                    <div id="divMoods" class="tags">
+                        oscar-worthy, 
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <button onclick="btnAddMoodClick()" class="button-addtag" type="button">ADD MOOD</button>
+                    <div class="tagentrycontainer">
+                        <input id="txtMood" class="tagentryfield" type="text" placeholder="Enter new mood here..." />
                     </div>
                 </div>
             </div>
@@ -161,9 +160,15 @@
             }
 
             function btnAddTagClick() {
-                    var newTag = document.getElementById("txtTag").value;
-                    var tags = document.getElementById("divTags");
-                    tags.innerHTML += newTag;
+                var newTag = document.getElementById("txtTag").value,
+                    tags = document.getElementById("divTags");
+                tags.innerHTML += newTag;
+            }
+
+            function btnAddMoodClick() {
+                var newMood = document.getElementById("txtMood").value,
+                    mood = document.getElementById("divMoods");
+                mood.innerHTML += newMood;
             }
 
             //Search bar at top of screen
