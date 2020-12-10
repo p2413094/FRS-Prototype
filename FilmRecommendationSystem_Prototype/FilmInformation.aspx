@@ -49,7 +49,6 @@
         <br />
         <br />
         <br />
-        <br />
 
         <section class="film">
             <div class="header">The Terminator (1984)</div>
@@ -130,6 +129,8 @@
                 <br />   
             </div>
         </section>
+        <br />
+        <br />
 
         <div class="footer">
             <div class="links">
@@ -172,9 +173,6 @@
                     mood = document.getElementById("divMoods");
                 mood.innerHTML += newMood;
             }
-
-
-
 
             function lblTag_Clicked() {
                 var confirmMessage = confirm("Delete tag?");

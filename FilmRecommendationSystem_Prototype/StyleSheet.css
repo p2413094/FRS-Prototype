@@ -95,7 +95,7 @@ a {
     font-style: normal;
     font-size: 15px;
     text-align: center;
-    width: 60%;
+    width: 50%;
     margin: auto;
 }
 
@@ -220,7 +220,7 @@ a {
     }
 
 .film .header {
-    font-size: 40px;
+    font-size: 38px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: lighter;
     text-align: left;
@@ -740,6 +740,19 @@ td {
     text-align: center;
 }
 
+
+
+.film .recommendoption {
+    background-color: transparent;
+    color: white;
+    border-radius: 6px;
+    margin-right: 6px;
+    width: 100px;
+    line-height: 30px;
+}
+
+
+
 .filmrecommendation-filmname {
     font-style: italic;
 }
@@ -764,11 +777,10 @@ td {
     font-size: small;
 }
 
-
 .homepage-subHeader {
     text-align: center;
     font-style: italic;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .homepage-mostRecommendedFilms {
@@ -780,8 +792,8 @@ td {
 .getrecommendations-button {
     background-color: limegreen;
     line-height: 60px;
+    border-radius: 6px;
 }
-
 
 .textbox-semitransparent {
     background: none;
@@ -815,4 +827,19 @@ td {
     background-color: transparent;
     color: white;
     margin-left: 5%;
+}
+
+
+.slctGenreMood {
+    background-color: transparent;
+    color: white;
+    width: 150px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.slctGenreMood-options {
+    background-color: black;
+    color: white;
+    padding: 8px;
 }

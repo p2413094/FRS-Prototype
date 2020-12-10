@@ -45,10 +45,6 @@
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
 
         <div>
             <p class="main-paragraph">
@@ -60,7 +56,6 @@
             </p>
         </div>
 
-
         <br />
         <br />
         <br />
@@ -68,28 +63,38 @@
 
         <div class="film">
             <p class="homepage-subHeader">
-                Enter a film you like to get started...
+               What genre/ mood of movie do you want?
             </p>
-            
-                <div class="filmSearch-dropdown">
-                    <input type="text" id="filmName" onkeyup="filterFunction()" />
 
-                    <div id="filmSearchDropdown" class="filmSearch-dropdown-content">
-                      <a onclick="AddItemToLabel()"> Aliens (1986)</a>
-                      <a onclick="AddGhostbustersToLabel()">Ghostbusters (1984)</a>
-                      <a> Star Wars: Episode V - The Empire Strikes Back (1980) </a>
-                      <a>Avengers: Endgame (2019)</a>
-                    </div>
-                </div>
+            <div>
+                <button type="button" id="btnGenre" onclick="btnGenre_Clicked()" class="recommendoption">genre</button>
+                <button type="button" id="btnMood" onclick="btnMood_Clicked()" class="recommendoption">mood</button>
+                <button type="button" id="btnBoth" onclick="btnBoth_Clicked()" class="recommendoption">both</button>
+            </div>
             <br />
             <br />
+
+            <div>
+                <select id="slctGenre" class="slctGenreMood">
+                    <option class="slctGenreMood-options">action</option>
+                    <option class="slctGenreMood-options">romance</option>
+                    <option class="slctGenreMood-options">sci-fi</option>
+                </select>
+            </div>
+            
+            <div>
+                <select id="slctMood" class="slctGenreMood">
+                    <option class="slctGenreMood-options">incredible</option>
+                    <option class="slctGenreMood-options">oscar-worthy</option>
+                    <option class="slctGenreMood-options">heart-warming</option>
+                </select>
+            </div>
+
             <br />
-            <label id="lblFilmsAdded">Films added:</label>
             <br />
             <br />
             <button id="btnGetRecommendations" onclick="GetRecommendations()" class="getrecommendations-button" 
                 type="button">GET RECOMMENDATIONS</button>
-
         </div>
 
         <br />
@@ -102,16 +107,19 @@
             <a href="FilmInformation.aspx">
                 <img src="Images/Terminator.jpg" class="image" />
             </a>
-            <img src="Images/Alien.jpg" class="image" />
-            <img src="Images/District 9.jpg" class="image" />
-            <img src="Images/Ghostbusters.jpg" class="image" />
+            <img id="recommendImg1" src="Images/Alien.jpg" class="image" />
+            <img id="recommendImg2" src="Images/District 9.jpg" class="image" />
+            <img id="recommendImg3" src="Images/Ghostbusters.jpg" class="image" />
+            <br />
+            <br />
+            <br />
         </section>
 
         <br />
         <div class="homepage-mostRecommendedFilms">
             Most recommended films
         </div>
-
+        <br />
         <section class="watchlist">
             <a href="FilmInformation.aspx">
                 <img src="Images/Terminator.jpg" class="image" />
@@ -141,27 +149,67 @@
             <img src="Images/Ghostbusters.jpg" class="image" />
         </section>
 
-
-
         <script>
             
             function onLoad() {
-                document.getElementById("lblFilmsAdded").style.visibility = "hidden";
-                document.getElementById("btnGetRecommendations").style.visibility = "hidden";
+                document.getElementById("btnGetRecommendations").style.display = "none";
                 document.getElementById("secYourRecommendations").style.display = "none";
+                document.getElementById("slctGenre").style.display = "none";
+                document.getElementById("slctMood").style.display = "none";
+            }
+
+            function btnGenre_Clicked() {
+                document.getElementById("slctGenre").style.display = "inline";
+                document.getElementById("btnGetRecommendations").style.display = "inline";
+            }
+
+            function btnMood_Clicked() {
+                document.getElementById("slctMood").style.display = "inline";
+                document.getElementById("btnGetRecommendations").style.display = "inline"
+            }
+
+            function btnBoth_Clicked() {
+                document.getElementById("slctGenre").style.display = "inline";
+                document.getElementById("slctMood").style.display = "inline";
+                document.getElementById("btnGetRecommendations").style.display = "inline";
             }
 
             function GetRecommendations() {
-                document.getElementById("secYourRecommendations").style.display = "block"
-            };
+                document.getElementById("secYourRecommendations").style.display = "block";
+                var ddlGenre = document.getElementById("slctGenre"),
+                    ddlMood = document.getElementById("slctMood"),
+                    selectedGenre = ddlGenre.value,
+                    selectedMood = ddlMood.value;
 
-            function AddItemToLabel() {
-                document.getElementById("lblFilmsAdded").style.visibility = "visible";
-                document.getElementById("lblFilmsAdded").innerText += "  Aliens (1986)";
-                document.getElementById("filmSearchDropdown").style.visibility = "hidden";
-                document.getElementById("filmName").value = "";
-                document.getElementById("btnGetRecommendations").style.visibility = "visible";
+                if (selectedGenre == "romance") {
+                    document.getElementById("recommendImg1").src = "Images/Bridesmaids.jpg";
+                    document.getElementById("recommendImg2").src = "Images/Titanic.jpg";
+                    document.getElementById("recommendImg3").src = "Images/LittleWomen.jpg";
+                }
 
+                if (selectedGenre == "sci-fi") {
+                    document.getElementById("recommendImg1").src = "Images/Dune.jpg";
+                    document.getElementById("recommendImg2").src = "Images/BladeRunner2049.jpg";
+                    document.getElementById("recommendImg3").src = "Images/Tron%20Legacy.jpg";
+                }
+
+                if (selectedMood == "oscar-worthy") {
+                    document.getElementById("recommendImg1").src = "Images/King Kong.jpg";
+                    document.getElementById("recommendImg2").src = "Images/Parasite.jpg";
+                    document.getElementById("recommendImg3").src = "Images/The%20Shawshank%20Redemption.jpg";
+                }
+                
+                if (selectedMood == "heart-warming") {
+                    document.getElementById("recommendImg1").src = "Images/WhenHarryMetSally.jpg";
+                    document.getElementById("recommendImg2").src = "Images/TheMartian.jpg";
+                    document.getElementById("recommendImg3").src = "Images/ThePursuitOfHappyness.jpg";
+                }
+
+                if (selectedGenre == "sci-fi" && selectedMood == "oscar-worthy") {
+                    document.getElementById("recommendImg1").src = "Images/King Kong.jpg";
+                    document.getElementById("recommendImg2").src = "Images/BladeRunner2049.jpg";
+                    document.getElementById("recommendImg3").src = "Images/Aliens.jpg";
+                }
             }
 
             function AddGhostbustersToLabel() {
@@ -169,7 +217,6 @@
                 document.getElementById("filmSearchDropdown").style.visibility = "hidden";
                 document.getElementById("filmName").value = "";
             }
-
 
             //search bar for adding films to recommended 
             function filterFunction() {
